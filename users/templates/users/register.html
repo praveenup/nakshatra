@@ -1,0 +1,72 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="">
+                    Join Today        
+                </legend>
+                {{ form_c|crispy }}
+                {{ form_u|crispy }}
+                
+                
+                <div class="form-group"> 
+                    <label for="id_participant1" class="col-form-label  requiredField">
+                        participant 1
+                        <span class="asteriskField">*</span>
+                    </label> 
+                    <div class=""> 
+                        <input type="text" name="participant1" class="form-control" required id="id_participant1"> 
+                    </div> 
+                </div>
+                <div class="form-group"> 
+                    <label for="id_participant2" class="col-form-label  requiredField">
+                        participant 2
+                        <span class="asteriskField">*</span>
+                    </label> 
+                    <div class=""> 
+                        <input type="text" name="participant2" class="form-control" required id="id_participant2"> 
+                    </div> 
+                </div>
+                <div class="form-group"> 
+                    <label for="id_participant3" class="col-form-label  requiredField">
+                        participant 3
+                        <span class="asteriskField">*</span>
+                    </label> 
+                    <div class=""> 
+                        <input type="text" name="participant3" class="form-control" required id="id_participant3"> 
+                    </div> 
+                </div>    
+                <div class="form-group"> 
+                    <label for="id_participant4" class="col-form-label  requiredField">
+                        participant 4
+                        <span class="asteriskField">*</span>
+                    </label> 
+                    <div class=""> 
+                        <input type="text" name="participant4" class="form-control" required id="id_participant4"> 
+                    </div> 
+                </div>
+                <div class="form-group"> 
+                    <label for="id_participant5" class="col-form-label  requiredField">
+                        participant 5
+                        <span class="asteriskField">*</span>
+                    </label> 
+                    <div class=""> 
+                        <input type="text" name="participant5" class="form-control" required id="id_participant5"> 
+                    </div> 
+                </div>
+            </fieldset>
+            <div class="form-goup">
+                <input class="btn btn-outline-info" type="submit" value="Sign Up">
+            </div>
+
+        </form>
+        <div class="border-to pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock %}
