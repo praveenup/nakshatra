@@ -8,7 +8,7 @@ class College(models.Model):
     college_name = models.TextField()
 
     def __str__(self):
-        return f'{self.college_name}'
+        return self.college_name
 
     class Meta:
         ordering = ('college_name',)
@@ -18,7 +18,7 @@ class UserCollege(models.Model):
     college_name = models.OneToOneField(College, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.user.username}'
+        return self.user.username
 
     class Meta:
           ordering = ('college_name',)
@@ -28,7 +28,7 @@ class Students(models.Model):
     participant_name = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return f'{self.college} Profile'
+        return self.college + ' Profile'
 
 
 
@@ -47,7 +47,7 @@ class Shirt(models.Model):
     shirt_size = models.CharField(max_length=5, choices=SHIRT_CHOICES)
 
     def __str__(self):
-        return f'Roll No.: {self.roll_no}, Name: {self.student_name} '
+        return 'Roll No.: '+ self.roll_no + ', Name:' + self.student_name
 
 class RegistrationPhoto(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
