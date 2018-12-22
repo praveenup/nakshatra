@@ -31,7 +31,7 @@ def register(request):
             new_obj5.save()
 
             username = form_u.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
+            messages.success(request, 'Account created for '+ username)
             email = request.POST['email']
             print(email)
             send_mail(
@@ -56,7 +56,7 @@ def shirt(request):
         if form.is_valid():
             form.save()
             roll_no = request.POST['roll_no']
-            messages.success(request, f'T-Shirt Details successfully submitted for Roll No.: {roll_no}')
+            messages.success(request, 'T-Shirt Details successfully submitted for Roll No.: ' + roll_no)
     else:
         form = ShirtForm()
     return render(request, 'users/shirt.html', {'form': form})
