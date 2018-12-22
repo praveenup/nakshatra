@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 # from django.db.models.signals import post_save
 # from django.dispatch import receiver
-# from PIL import Image
+from PIL import Image
 
 class College(models.Model):
     college_name = models.TextField()
@@ -24,11 +24,39 @@ class UserCollege(models.Model):
           ordering = ('college_name',)
 
 class Students(models.Model):
-    college = models.ForeignKey(UserCollege, on_delete=models.CASCADE, null=True)
+    college = models.ForeignKey(UserCollege, on_delete=models.CASCADE)
     participant_name = models.CharField(max_length=100, null=True)
 
     def __str__(self):
         return f'{self.college} Profile'
+
+
+
+SHIRT_CHOICES = (
+    ('s','S'),
+    ('m', 'M'),
+    ('l','L'),
+    ('xl','XL'),
+    ('xxl','XXL'),
+    
+)
+
+class Shirt(models.Model):
+    roll_no = models.CharField(max_length=10, unique=True)
+    student_name = models.CharField(max_length=100)
+    shirt_size = models.CharField(max_length=5, choices=SHIRT_CHOICES)
+
+    def __str__(self):
+        return f'Roll No.: {self.roll_no}, Name: {self.student_name} '
+
+class RegistrationPhoto(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    student_name = models.CharField(max_length=100)
+    contact = models.IntegerField()
+    email = models.EmailField()
+    desc = models.TextField()
+    image = models.ImageField(upload_to='photography_pics')
+    topic = models.CharField(max_length=100)
 
     # @receiver(post_save, sender=User)
     # def create_profile(sender, instance, created, **kwargs):

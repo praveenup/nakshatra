@@ -77,12 +77,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nakshatra19',
-        'USER': 'root', 
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',   #my port is 3306
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'nakshatra19',
+        # 'USER': 'root', 
+        # 'PASSWORD': '',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306',   #my port is 3306
     }
 }
 
@@ -123,6 +125,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK ='bootstrap4'
 LOGIN_REDIRECT_URL = 'profile'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'prakum633@gmail.com'
+EMAIL_HOST_PASSWORD = '11'
