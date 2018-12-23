@@ -47,7 +47,8 @@ class Shirt(models.Model):
     shirt_size = models.CharField(max_length=5, choices=SHIRT_CHOICES)
 
     def __str__(self):
-        return self.roll_no , self.student_name
+        template = '{0.roll_no} {0.student_name}'
+        return template.format(self)
 
 class RegistrationPhoto(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
