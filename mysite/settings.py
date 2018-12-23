@@ -25,7 +25,7 @@ SECRET_KEY = '_mm2i7@y0m@j47w7hnp$=&nbipzq&)b!rjyfyjmdchd%f9s^5d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['prakumup.pythonanywhere.com']
 
 
 # Application definition
@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'nakshatra19',
-        # 'USER': 'root', 
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',   #my port is 3306
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'prakumup$nakshatra',
+        'USER': 'prakumup',
+        'PASSWORD': 'nakshatramca2k19',
+        'HOST': 'prakumup.mysql.pythonanywhere-services.com',
+        'PORT': '3306',   #my port is 3306
     }
 }
 
@@ -140,4 +140,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'prakum633@gmail.com'
-EMAIL_HOST_PASSWORD = '11'
+EMAIL_HOST_PASSWORD = 'Liz@rd123'
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

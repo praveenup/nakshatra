@@ -28,7 +28,7 @@ class Students(models.Model):
     participant_name = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return self.college + ' Profile'
+        return self.participant_name
 
 
 
@@ -38,7 +38,7 @@ SHIRT_CHOICES = (
     ('l','L'),
     ('xl','XL'),
     ('xxl','XXL'),
-    
+
 )
 
 class Shirt(models.Model):
@@ -47,7 +47,7 @@ class Shirt(models.Model):
     shirt_size = models.CharField(max_length=5, choices=SHIRT_CHOICES)
 
     def __str__(self):
-        return 'Roll No.: '+ self.roll_no + ', Name:' + self.student_name
+        return self.roll_no , self.student_name
 
 class RegistrationPhoto(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
