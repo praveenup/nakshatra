@@ -12,9 +12,9 @@ class UserRegisterForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 
-    def __init__(self, *args, **kwargs):
-        super(UserRegisterForm, self).__init__(*args, **kwargs)
-        self.fields['username'].label = "Team Name"
+    # def __init__(self, *args, **kwargs):
+    #     super(UserRegisterForm, self).__init__(*args, **kwargs)
+    #     self.fields['username'].label = "Team Name"
     # def __init__(self, *args, **kwargs):
     #     super(UserRegisterForm, self).__init__(*args, **kwargs)
     #     self.fields['first_name'].required = True 

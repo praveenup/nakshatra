@@ -80,6 +80,14 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+<<<<<<< HEAD
+=======
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'prakumup$nakshatra',
+        # 'USER': 'prakumup',
+        # 'HOST': 'prakumup.mysql.pythonanywhere-services.com',
+        # 'PORT': '3306',   #my port is 3306
+>>>>>>> db4e30994f271827c565b4af1304553b63ab3e47
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'prakumup$nakshatra',
         'USER': 'prakumup',
