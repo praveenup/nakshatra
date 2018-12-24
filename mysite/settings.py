@@ -80,14 +80,11 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-<<<<<<< HEAD
-=======
         # 'ENGINE': 'django.db.backends.mysql',
         # 'NAME': 'prakumup$nakshatra',
         # 'USER': 'prakumup',
         # 'HOST': 'prakumup.mysql.pythonanywhere-services.com',
         # 'PORT': '3306',   #my port is 3306
->>>>>>> db4e30994f271827c565b4af1304553b63ab3e47
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'prakumup$nakshatra',
         'USER': 'prakumup',
@@ -158,7 +155,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'prakum633@gmail.com'
-EMAIL_HOST_PASSWORD = 'Liz@rd123'
+EMAIL_HOST_PASSWORD = 'S@ndeep123'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
