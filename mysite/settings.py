@@ -86,17 +86,11 @@ DATABASES = {
         # 'HOST': 'prakumup.mysql.pythonanywhere-services.com',
         # 'PORT': '3306',   #my port is 3306
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'prakumup$nakshatra',
-        'USER': 'prakumup',
-        'PASSWORD': 'nakshatra2k19',
-        'HOST': 'prakumup.mysql.pythonanywhere-services.com',
-        'PORT': '3306',   #my port is 3306
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'nakshatra19',
-        # 'USER': 'root',
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',
+        'NAME': 'nakshatra19',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
