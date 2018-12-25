@@ -87,10 +87,27 @@
         <!-- <link rel="stylesheet" href="{% static 'assets/css/style.css'%}"> -->
 
 
+    <style>
+        /* preloader - start
+        ================================================== */
+        #preloader {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1005;
+        position: fixed;
+        overflow: visible;
+        background: #fff url("{% static 'assets/preloader.gif'%}") no-repeat center center; }
 
+        /* preloader - end
+        ================================================== */
+    </style>
     </head>
     <body class="home">
-
+		<!-- preloader - start -->
+		<div id="preloader"></div>
+		<!-- preloader - end -->
             <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
                 your browser</a> to improve your experience.</p>
@@ -289,5 +306,14 @@
 <script src="{% static 'assets/js/custom.script.js'%}"></script>
 
 <!-- <script  src="{% static 'assets/js/index.js' %}"></script> -->
+<script>
+  // preloader - start
+  // --------------------------------------------------
+  $(window).on('load', function(){
+    $('#preloader').fadeOut('slow',function(){$(this).remove();});
+  });
+  // preloader - end
+  // --------------------------------------------------
+</script>
 </body>
 </html>
