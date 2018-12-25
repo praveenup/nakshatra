@@ -2,21 +2,14 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
+
 <select id="thisSelect" hidden onchange="changeWords()">
-        <option value="0">Words</option>
-        <option value="1">Binary</option>
-    <select>
-    <!-- <button onclick="newLingo()">New</button> -->
-
-
-        <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
-        <script  src="{% static 'assets/js/index.js' %}"></script>
+    <option value="0">Words</option>
+    <option value="1">Binary</option>
+</select>
 
 
 
-
-    </div>
-    </section>
 <!--BANNER-->
 <section>
         <div class="lgx-banner lgx-banner12">
