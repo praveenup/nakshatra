@@ -44,15 +44,19 @@
     </section>
     <!--BANNER END-->
 
-
-        <!--countdown-->
-        <section style="height:400px">
-            <div id="" class=""> <!--lgx-countdowns3 lgx-countdowns4-->
-                <div class="">
+<style>
+.time_circles{
+    height:270px;
+}
+</style>
+            <!--countdown-->
+        <section>
+            <div id="lgx-countdowns" class="lgx-countdowns lgx-countdowns4"> <!--lgx-countdowns3 lgx-countdowns4-->
+                <div class="lgx-inner">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="">
+                                <div class="circular-countdown-area">
                                     <div id="circular-countdown" data-date="2019-02-09 00:00:00" ></div>
                                 </div>
                             </div>
@@ -1123,10 +1127,6 @@
         </div>
     </section>
     <!--//.VIDEO END-->
-<select id="thisSelect" hidden onchange="changeWords()">
-                                <option value="0">Words</option>
-                                <option value="1">Binary</option>
-                        </select>
 
 
 {% endblock %}
