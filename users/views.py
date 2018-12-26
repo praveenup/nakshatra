@@ -3,6 +3,7 @@ from django.contrib import messages
 from .forms import UserRegisterForm, CollegeForm, ShirtForm
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from .models import Students, Shirt
 from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.templatetags.staticfiles import static
@@ -44,6 +45,11 @@ def register(request):
             [email],
             fail_silently=False,
             )
+            msg = EmailMessage('Subject of the Email', 'Body of the email', 'prakum633@gmail.com',
+            [email],)
+            msg.content_subtype = "html"  
+            msg.attach_file('pdfs/confirmation_letter.pdf')
+            msg.send()
             return redirect('login')
     else:
         form_u = UserRegisterForm()
