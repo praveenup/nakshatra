@@ -1,17 +1,90 @@
 {% extends 'users/base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
 
-{% if messages %}
-{% for message in messages %}
-    <div class="text-center alert alert-{{message.tags}}">
-        {{ message }}
-    </div>
-{% endfor %}
-{% endif %}
-    <h2>Order Your T-shirt</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+
+    <!--Banner Inner-->
+    <section>
+        <div class="lgx-banner lgx-banner-inner">
+            <div class="lgx-page-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading-area">
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading">Order Your T-Shirt For Nakshatra</h2>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                                    <li class="active">TShirt</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--//.ROW-->
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section> <!--//.Banner Inner-->
+
+
+    <main>
+        <div class="lgx-page-wrapper">
+            <!--News-->
+            <section>
+                <div class="container">
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="text-center alert alert-{{message.tags}}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-6 col-md-offset-3">
+                                <form method="POST" class="post-form">{% csrf_token %}
+                                    {{ form|crispy }}
+                                    <div class="form-goup text-center">
+                                        <input class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send" type="submit" value="Order Now">
+                                    </div>
+                                </form>
+
+                            <!-- MODAL SECTION -->
+                            <div id="lgx-form-modal" class="modal fade lgx-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content lgx-modal-content">
+                                        <div class="modal-header lgx-modal-header">
+                                            <button type="button" class="close brand-color-hover" data-dismiss="modal" aria-label="Close">
+                                                <i class="fa fa-power-off"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="alert lgx-form-msg" role="alert"></div>
+                                        </div> <!--//MODAL BODY-->
+
+                                    </div>
+                                </div>
+                            </div> <!-- //MODAL -->
+
+                        </div> <!--//.COL-->
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </section>
+            <!--News END-->
+        </div>
+    </main>
+
+
+
+
+
 {% endblock %}

@@ -6,7 +6,8 @@ from django.core.mail import send_mail
 from .models import Students, Shirt
 from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.templatetags.staticfiles import static
-from django.core.mail import EmailMultiAlternatives
+
+
 def index(request):
     return render(request, 'users/index.html')
 
