@@ -4,6 +4,7 @@ from .forms import UserRegisterForm, CollegeForm, ShirtForm
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from .models import Students, Shirt
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'users/index.html')
@@ -47,6 +48,7 @@ def register(request):
         form_c = CollegeForm()
     return render(request, 'users/register.html', {'form_u': form_u, 'form_c': form_c})
 
+@login_required
 def profile(request):
     return render(request, 'users/profile.html')
 
