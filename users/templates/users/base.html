@@ -137,22 +137,37 @@
                                         <span class="icon-bar"></span>
                                     </button>
                                     <div class="lgx-logo">
-                                        <a href="index.html" class="lgx-scroll">
+                                        <a href="{% url 'index' %}" class="lgx-scroll">
                                             <img src="{% static 'assets/img/logo.png' %}" alt="Eventhunt Logo"/>
                                         </a>
                                     </div>
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse lgx-collapse">
                                     <ul class="nav navbar-nav lgx-nav">
+                                        
+                                        {% url 'index' as index_url %}
+                                        {% if request.get_full_path == index_url %}
                                         <li>
-                                            <a class="lgx-scroll" href="#lgx-header" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                                        <li>
+                                                <a class="lgx-scroll" href="#lgx-header" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                            <li>
                                         <li><a class="lgx-scroll" href="#lgx-speakers" data-toggle="collapse" data-target=".navbar-collapse.show">Speaker</a></li>
                                         <li><a class="lgx-scroll" href="#lgx-schedule" data-toggle="collapse" data-target=".navbar-collapse.show">Schedule</a></li>
                                         <li><a class="lgx-scroll" href="#lgx-sponsors" data-toggle="collapse" data-target=".navbar-collapse.show">Sponsors</a></li>
-                                        <li><a class="lgx-scroll" href="#lgx-news" data-toggle="collapse" data-target=".navbar-collapse.show">News</a></li>
-                                        <li><a class="lgx-scroll" href="contact.html" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li>
-                                    </ul>
+                                        {% else %}
+                                        <li>
+                                                <a class="lgx-scroll" href="{% url 'index' %}" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                            <li>
+                                        {% endif %}
+                                        <!-- <li><a class="lgx-scroll" href="#lgx-news" data-toggle="collapse" data-target=".navbar-collapse.show">News</a></li> -->
+                                        <!-- <li><a class="lgx-scroll" href="contact.html" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li> -->
+                                        {% if user.is_authenticated %}
+                                        <li><a class="lgx-scroll" href="{% url 'profile' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Profile</a></li>
+                                            <li><a class="lgx-scroll" href="{% url 'logout' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Logout</a></li>
+                                        {% else %}
+                                        <li><a class="lgx-scroll" href="{% url 'login' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Login</a></li>
+                                        <li><a class="lgx-scroll" href="{% url 'register' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Register</a></li>
+                                        {% endif %}
+                                        </ul>
                                 </div><!--/.nav-collapse -->
                             </nav>
                         </div>
