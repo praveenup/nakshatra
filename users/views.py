@@ -5,7 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from .models import Students, Shirt
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.core.mail import EmailMultiAlternatives
 def index(request):
     return render(request, 'users/index.html')
 
@@ -37,7 +38,7 @@ def register(request):
             print(email)
             send_mail(
             'Subject here',
-            'Here is the message.',
+            'Here is the message.'+ '<a href="localhost:8000' + static('assets/preloader.gif')+'">get form</a>',
             'prakum633@gmail.com',
             [email],
             fail_silently=False,
