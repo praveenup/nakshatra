@@ -16,6 +16,7 @@ class College(models.Model):
 class UserCollege(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     college_name = models.OneToOneField(College, on_delete=models.CASCADE)
+    contact_no = models.CharField(max_length=10)
 
     def __str__(self):
         return self.user.username
@@ -25,7 +26,8 @@ class UserCollege(models.Model):
 
 class Students(models.Model):
     college = models.ForeignKey(UserCollege, on_delete=models.CASCADE)
-    participant_name = models.CharField(max_length=100, null=True)
+    participant_name = models.CharField(max_length=100)
+    gender = models.CharField(max_length=10)
 
     def __str__(self):
         return self.participant_name
@@ -50,14 +52,14 @@ class Shirt(models.Model):
         template = '{0.roll_no} {0.student_name}'
         return template.format(self)
 
-class RegistrationPhoto(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    student_name = models.CharField(max_length=100)
-    contact = models.IntegerField()
-    email = models.EmailField()
-    desc = models.TextField()
-    image = models.ImageField(upload_to='photography_pics')
-    topic = models.CharField(max_length=100)
+# class RegistrationPhoto(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     student_name = models.CharField(max_length=100)
+#     contact = models.IntegerField()
+#     email = models.EmailField()
+#     desc = models.TextField()
+#     image = models.ImageField(upload_to='photography_pics')
+#     topic = models.CharField(max_length=100)
 
     # @receiver(post_save, sender=User)
     # def create_profile(sender, instance, created, **kwargs):

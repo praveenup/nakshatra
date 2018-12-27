@@ -23,15 +23,15 @@ def register(request):
             new_obj.user = new_user
             new_obj.save()
 
-            new_obj1 = Students(college=new_obj, participant_name=request.POST['participant1'])
+            new_obj1 = Students(college=new_obj, participant_name=request.POST['participant1'], gender=request.POST['gender1'])
             new_obj1.save()
-            new_obj2 = Students(college=new_obj, participant_name=request.POST['participant2'])
+            new_obj2 = Students(college=new_obj, participant_name=request.POST['participant2'], gender=request.POST['gender2'])
             new_obj2.save()
-            new_obj3 = Students(college=new_obj, participant_name=request.POST['participant3'])
+            new_obj3 = Students(college=new_obj, participant_name=request.POST['participant3'], gender=request.POST['gender3'])
             new_obj3.save()
-            new_obj4 = Students(college=new_obj, participant_name=request.POST['participant4'])
+            new_obj4 = Students(college=new_obj, participant_name=request.POST['participant4'], gender=request.POST['gender4'])
             new_obj4.save()
-            new_obj5 = Students(college=new_obj, participant_name=request.POST['participant5'])
+            new_obj5 = Students(college=new_obj, participant_name=request.POST['participant5'], gender=request.POST['gender5'])
             new_obj5.save()
 
             username = form_u.cleaned_data.get('username')
@@ -41,11 +41,11 @@ def register(request):
             send_mail(
             'Subject here',
             'Here is the message.'+ '<a href="localhost:8000' + static('assets/preloader.gif')+'">get form</a>',
-            'prakum633@gmail.com',
+            'nakshatra2k19@gmail.com',
             [email],
             fail_silently=False,
             )
-            msg = EmailMessage('Subject of the Email', 'Body of the email', 'prakum633@gmail.com',
+            msg = EmailMessage('Subject of the Email', 'Body of the email', 'nakshatra2k19@gmail.com',
             [email],)
             msg.content_subtype = "html"  
             msg.attach_file('pdfs/confirmation_letter.pdf')
