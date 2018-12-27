@@ -23,15 +23,15 @@ def register(request):
             new_obj.user = new_user
             new_obj.save()
 
-            new_obj1 = Students(college=new_obj, participant_name=request.POST['participant1'])
+            new_obj1 = Students(college=new_obj, participant_name=request.POST['participant1'], gender=request.POST['gender1'])
             new_obj1.save()
-            new_obj2 = Students(college=new_obj, participant_name=request.POST['participant2'])
+            new_obj2 = Students(college=new_obj, participant_name=request.POST['participant2'], gender=request.POST['gender2'])
             new_obj2.save()
-            new_obj3 = Students(college=new_obj, participant_name=request.POST['participant3'])
+            new_obj3 = Students(college=new_obj, participant_name=request.POST['participant3'], gender=request.POST['gender3'])
             new_obj3.save()
-            new_obj4 = Students(college=new_obj, participant_name=request.POST['participant4'])
+            new_obj4 = Students(college=new_obj, participant_name=request.POST['participant4'], gender=request.POST['gender4'])
             new_obj4.save()
-            new_obj5 = Students(college=new_obj, participant_name=request.POST['participant5'])
+            new_obj5 = Students(college=new_obj, participant_name=request.POST['participant5'], gender=request.POST['gender5'])
             new_obj5.save()
 
             username = form_u.cleaned_data.get('username')
