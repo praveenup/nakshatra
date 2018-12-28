@@ -47,8 +47,8 @@ def register(request):
             )
             msg = EmailMessage('Subject of the Email', 'Body of the email', 'nakshatra2k19@gmail.com',
             [email],)
-            msg.content_subtype = "html"  
-            msg.attach_file('pdfs/confirmation_letter.pdf')
+            msg.content_subtype = "html"
+            msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
             msg.send()
             return redirect('login')
     else:
@@ -71,4 +71,3 @@ def shirt(request):
         form = ShirtForm()
     return render(request, 'users/shirt.html', {'form': form})
 
-    
