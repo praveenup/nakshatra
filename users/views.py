@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import UserRegisterForm, CollegeForm, ShirtForm
+from .forms import UserRegisterForm, CollegeForm, ShirtForm, DocumentForm
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from .models import Students, Shirt
 from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.templatetags.staticfiles import static
-
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 
 def index(request):
     return render(request, 'users/index.html')
@@ -71,3 +72,14 @@ def shirt(request):
         form = ShirtForm()
     return render(request, 'users/shirt.html', {'form': form})
 
+def model_form_upload(request):
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = DocumentForm()
+    return render(request, 'users/model_form_upload.html', {
+        'form': form
+    })

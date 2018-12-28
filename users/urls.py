@@ -6,7 +6,8 @@ from django.views.generic import TemplateView
 # app_name = 'users'
 
 urlpatterns = [
-    path('tshirt/', views.shirt, name="shirt"),
+    path('photo/', views.model_form_upload, name="shirt"),
+    path('tshirt/', views.shirt, name="photo"),
     path('register/', views.register,name="register"),
     path('profile/', views.profile,name="profile"),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'),name="login"),

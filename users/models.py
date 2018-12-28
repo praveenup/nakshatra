@@ -52,6 +52,11 @@ class Shirt(models.Model):
         template = '{0.roll_no} {0.student_name}'
         return template.format(self)
 
+
+class Document(models.Model):
+    description = models.CharField(max_length=255, blank=True)
+    document = models.FileField(upload_to='documents/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 # class RegistrationPhoto(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE)
 #     student_name = models.CharField(max_length=100)
