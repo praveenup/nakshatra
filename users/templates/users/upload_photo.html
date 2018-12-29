@@ -17,7 +17,9 @@
             <div class="lgx-page-inner">
                 <div class="container">
                     
-                        
+                        <div class="form-goup text-right">
+                                <a href="{% url 'photo_logout' %}" class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send">Logout</a>
+                        </div>    
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
@@ -39,6 +41,7 @@
 
     <main>
         <div class="lgx-page-wrapper">
+                
             <!--News-->
             <section>
                 <div class="container">
@@ -52,16 +55,19 @@
                     <div class="row">
                         <!-- <img class="rounded-circle account-img" src="{{ photo.image.url }}"> -->
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
-                                {% if not added %}
-                                    <form method="POST" enctype="multipart/form-data">
+                            {% if flag %}
+                                <form method="POST"  enctype="multipart/form-data">
                                         {% csrf_token %}
                                         {{ form|crispy }}
                                         <div class="form-goup text-center">
                                             <input class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send" type="submit" value="Upload">
                                         </div>
+                            
                                     </form>
-                                {% endif %}
-
+                            {% endif %}
+                            
+                                
+                            </div>
                             <!-- MODAL SECTION -->
                             <div id="lgx-form-modal" class="modal fade lgx-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">

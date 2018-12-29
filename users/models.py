@@ -54,25 +54,27 @@ class Shirt(models.Model):
 
 
 
-class RegistrationPhoto(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    college = models.OneToOneField(College, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    contact_no = models.CharField(max_length=10)
+
+class PhotoRegistration(models.Model):
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=50)
+    student_name = models.CharField(max_length=100)
+    contact_no = models.CharField(max_length=10,unique=True)
     topic = models.CharField(max_length=100)
 
     def __str__(self):
-        template = '{0.college.college_name} {0.name}'
+        template = '{0.college.college_name} {0.student_name}'
         return template.format(self)
     
 
-class Photo(models.Model):
-    photo_user = models.OneToOneField(RegistrationPhoto, on_delete=models.CASCADE)
-    description = models.TextField(null=True)
-    image = models.ImageField(upload_to='photography_pics' , null=True )
+class UserPhoto(models.Model):
+    photo_reg = models.OneToOneField(PhotoRegistration, on_delete=models.CASCADE)
+    description = models.TextField()
+    image = models.ImageField(upload_to='photography_pics')
 
     def __str__(self):
-        return self.photo_user.name
+        return self.photo_reg.email
 
 class CodingCompetition(models.Model):
     name = models.CharField(max_length=100)

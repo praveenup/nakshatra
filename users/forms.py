@@ -1,9 +1,21 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Students, UserCollege, Shirt, RegistrationPhoto, Photo, CodingCompetition
+from .models import Students, UserCollege, Shirt, PhotoRegistration, UserPhoto, CodingCompetition
 import os
 from django.core.exceptions import ValidationError
+
+class PhotoRegistrationForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+    class Meta:
+        model=PhotoRegistration
+        exclude = ['topic']
+
+class UserPhotoForm(forms.ModelForm):
+    class Meta:
+        model = UserPhoto
+        exclude = ['photo_reg']
+
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
@@ -32,15 +44,15 @@ class ShirtForm(forms.ModelForm):
         fields = "__all__"
 
 
-class RegistrationPhotoForm(forms.ModelForm):
-    class Meta:
-        model = RegistrationPhoto
-        exclude = ['user','topic']
+# class RegistrationPhotoForm(forms.ModelForm):
+#     class Meta:
+#         model = RegistrationPhoto
+#         exclude = ['user','topic']
 
-class PhotoForm(forms.ModelForm):
-    class Meta:
-        model = Photo
-        exclude = ['photo_user']
+# class PhotoForm(forms.ModelForm):
+#     class Meta:
+#         model = Photo
+#         exclude = ['photo_user']
 
 class CodingCompetitionForm(forms.ModelForm):
     class Meta:

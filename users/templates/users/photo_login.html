@@ -50,24 +50,35 @@
                     <div class="row">
 
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
-                                <form method="POST">
+                                <form method="POST" action="{% url 'photo_login' %}">
                                         {% csrf_token %}
 
-                                        <!-- <legend class="text-center">
-                                                <h3>Login Nakshatra</h3>
-                                        </legend> -->
-
-                                        {{form|crispy}}
+                                        <div class="form-group"> 
+                                                <label for="email" class="col-form-label  requiredField">
+                                                    Email
+                                                    <span class="asteriskField">*</span>
+                                                </label> 
+                                                <div class=""> 
+                                                    <input type="email" name="email" class="form-control" required id="id_email"> 
+                                                </div> 
+                                            </div>
+                                            <div class="form-group"> 
+                                                <label for="password" class="col-form-label  requiredField">
+                                                    Password
+                                                    <span class="asteriskField">*</span>
+                                                </label> 
+                                                <div class=""> 
+                                                    <input type="password" name="password" class="form-control" required id="id_password"> 
+                                                </div> 
+                                            </div>
                                         <div class="form-goup text-center">
                                             <input class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send" type="submit" value="Login">
                                         </div>
-
-                                    </form>
                                     <div class="form-goup text-center">
                                         <h4 class="text-muted">
-                                            Need An Account?
+                                            Need an account for Photography
                                             <a href="{% url 'photo_register' %}">Sign Up Now</a>
-                                        </h3>
+                                        </h4>
 
 
                                     </div>
