@@ -53,19 +53,33 @@ class Shirt(models.Model):
         return template.format(self)
 
 
-class Document(models.Model):
-    description = models.CharField(max_length=255, blank=True)
-    document = models.FileField(upload_to='documents/')
-    uploaded_at = models.DateTimeField(auto_now_add=True)
-# class RegistrationPhoto(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     student_name = models.CharField(max_length=100)
-#     contact = models.IntegerField()
-#     email = models.EmailField()
-#     desc = models.TextField()
-#     image = models.ImageField(upload_to='photography_pics')
-#     topic = models.CharField(max_length=100)
 
+class RegistrationPhoto(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    college = models.OneToOneField(College, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    contact_no = models.CharField(max_length=10)
+    topic = models.CharField(max_length=100)
+
+    def __str__(self):
+        template = '{0.college.college_name} {0.name}'
+        return template.format(self)
+    
+
+class Photo(models.Model):
+    photo_user = models.OneToOneField(RegistrationPhoto, on_delete=models.CASCADE)
+    description = models.TextField(null=True)
+    image = models.ImageField(upload_to='photography_pics' , null=True )
+
+    def __str__(self):
+        return self.photo_user.name
+
+class CodingCompetition(models.Model):
+    name = models.CharField(max_length=100)
+    hackerrank_handle = models.CharField(max_length=100, unique=True)
+    contact_no = models.CharField(max_length=10)
+    email = models.EmailField()
+    shirt_size = models.CharField(max_length=5, choices=SHIRT_CHOICES)
     # @receiver(post_save, sender=User)
     # def create_profile(sender, instance, created, **kwargs):
     #     if created:

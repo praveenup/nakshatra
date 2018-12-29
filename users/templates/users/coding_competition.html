@@ -1,4 +1,3 @@
-
 {% extends 'users/base.html' %}
 {% load crispy_forms_tags %}
 {% load static %}
@@ -21,11 +20,11 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Logout</h2>
+                                    <h2 class="heading">Coding Competition For Nakshatra</h2>
                                 </div>
                                 <ul class="breadcrumb">
                                     <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-                                    <li class="active">Logout</li>
+                                    <li class="active">Coding</li>
                                 </ul>
                             </div>
                         </div>
@@ -41,36 +40,22 @@
             <!--News-->
             <section>
                 <div class="container">
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="text-center alert alert-{{message.tags}}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                        {% endif %}
                     <div class="row">
 
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
-                            <form method="post" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                {{ form.as_p }}
-                                <button type="submit">Upload</button>
-                              </form>
-                            
-                              <p><a href="{% url 'photo' %}">Return to home</a></p>
-                            <!-- <form method="POST" class="lgx-contactform" action="http://themearth.com/demo/html/emeet/view/php/form-handler.php">
-                                <div class="form-group">
-                                    <input type="text" name="lgxname" class="form-control lgxname" id="lgxname" placeholder="Enter Your Name" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" name="lgxemail" class="form-control lgxemail" id="lgxemail" placeholder="Enter email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" name="lgxsubject" class="form-control lgxsubject" id="lgxsubject" placeholder="Subject" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea class="form-control lgxmessage" name="lgxmessage" id="lgxmessage" rows="5" placeholder="We expect drop some line from you..." required></textarea>
-                                </div>
-
-
-
-                            </form> -->
+                                <form method="POST" class="post-form">{% csrf_token %}
+                                    {{ form|crispy }}
+                                    <div class="form-goup text-center">
+                                        <input class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send" type="submit" value="Order Now">
+                                    </div>
+                                </form>
 
                             <!-- MODAL SECTION -->
                             <div id="lgx-form-modal" class="modal fade lgx-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
