@@ -1,8 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from django.db.models.signals import post_save
-# from django.dispatch import receiver
-from PIL import Image
 
 class College(models.Model):
     college_name = models.TextField()
@@ -55,26 +52,6 @@ class Shirt(models.Model):
 
 
 
-class PhotoRegistration(models.Model):
-    college = models.ForeignKey(College, on_delete=models.CASCADE)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=50)
-    student_name = models.CharField(max_length=100)
-    contact_no = models.CharField(max_length=10,unique=True)
-    topic = models.CharField(max_length=100)
-
-    def __str__(self):
-        template = '{0.college.college_name} {0.student_name}'
-        return template.format(self)
-    
-
-class UserPhoto(models.Model):
-    photo_reg = models.OneToOneField(PhotoRegistration, on_delete=models.CASCADE)
-    description = models.TextField()
-    image = models.ImageField(upload_to='photography_pics')
-
-    def __str__(self):
-        return self.photo_reg.email
 
 class CodingCompetition(models.Model):
     name = models.CharField(max_length=100)

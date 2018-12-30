@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['prakumup.pythonanywhere.com','localhost']
 INSTALLED_APPS = [
     'users',
     'quiz',
+    'events',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -19,6 +19,7 @@ from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('events/', include('events.urls')),
     path('users/', include('users.urls')),
     path('quiz/', include('quiz.urls')),
     path('', views.index, name='index'),
