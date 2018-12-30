@@ -26,7 +26,7 @@ def photo_register(request):
             [email,'praveenkprestige@gmail.com'],)
             msg.content_subtype = "html"
             # msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
-            msg.attach_file('pdfs/confirmation_letter.pdf')
+            msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
 
             msg.send()
             return render(request, 'events/photo_login.html',)
@@ -74,7 +74,8 @@ def upload_photo(request):
                         [email,'praveenkprestige@gmail.com'],)
                         msg.content_subtype = "html"
                         # msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
-                        msg.attach_file('media/' + user.image.name)
+                        msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/media/' + user.image.name)
+                        # msg.attach_file('media/' + user.image.name)
                         msg.send()
                         messages.success(request, 'Successfully saved photo ')
                         flag=False
