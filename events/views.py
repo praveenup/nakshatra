@@ -74,8 +74,8 @@ def upload_photo(request):
                         [email,'praveenkprestige@gmail.com'],)
                         msg.content_subtype = "html"
                         # msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
-                        msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/media/' + user.image.name)
-                        # msg.attach_file('media/' + user.image.name)
+                        # msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/media/' + user.image.name)
+                        msg.attach_file('media/' + user.image.name)
                         msg.send()
                         messages.success(request, 'Successfully saved photo ')
                         flag=False
@@ -85,7 +85,7 @@ def upload_photo(request):
                     return render(request, 'events/upload_photo.html',)
             else:
                 form = UserPhotoForm()
-                flag=True
+            flag=True
             topic = photo_user.topic
             print(topic)
             return render(request, 'events/upload_photo.html', {'form':form, 'flag':flag, 'topic': topic })
