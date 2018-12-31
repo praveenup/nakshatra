@@ -57,7 +57,12 @@
                                                 <h3>Login Nakshatra</h3>
                                         </legend> -->
 
-                                        {{form|crispy}}
+                                        <div class="form-group">
+                                            {{ form.username|as_crispy_field  }}
+                                        </div>
+                                        <div class="form-group">
+                                                {{ form.password|as_crispy_field  }}
+                                            </div>
                                         <div class="form-goup text-center">
                                             <input class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send" type="submit" value="Login">
                                         </div>

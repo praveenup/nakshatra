@@ -12,13 +12,13 @@ def photo_register(request):
     if request.method == "POST":
         form = PhotoRegistrationForm(request.POST)
         if form.is_valid():
-            
+
             topics = ['topic1','topic2','topic3','topic4','topic5']
             photo_topic = topics[random.randint(0,len(topics)-1)]
-                        
+
             user_detail = form.save(commit=False)
             user_detail.topic = photo_topic
-            user_detail.save() 
+            user_detail.save()
             messages.success(request, 'Successfully registered')
             email = request.POST['email']
             email_body = "<html><h3>You have successfully registered</h3><br>Name:" + request.POST['student_name'] + "<br>Password: " + request.POST['password'] + "<br><h2>Your Topic : " + photo_topic + "</h2>" + "</html>"
@@ -40,7 +40,7 @@ def photo_login(request):
         password = request.POST['password']
         try:
             photo_user = PhotoRegistration.objects.get(email=email,password=password)
-        except PhotoRegistration.DoesNotExist:   
+        except PhotoRegistration.DoesNotExist:
             messages.success(request, 'Email and Password does not matched ')
             return render(request, 'events/photo_login.html',)
         messages.success(request, 'Login Success ' + email)
@@ -63,12 +63,12 @@ def upload_photo(request):
                     if form.is_valid():
                         user = form.save(commit=False)
                         user.photo_reg = PhotoRegistration.objects.get(email=request.session['photo_user'])
-                        
+
                         try:
                             user.save()
                         except:
                             messages.success(request, 'Already Uploaded')
-                            return render(request, 'events/upload_photo.html',) 
+                            return render(request, 'events/upload_photo.html',)
                         email = request.session['photo_user']
                         msg = EmailMessage('Subject of the Email', '<h1>Photo Body of the email</h1>', 'nakshatra2k19@gmail.com',
                         [email,'praveenkprestige@gmail.com'],)
@@ -85,7 +85,7 @@ def upload_photo(request):
                     return render(request, 'events/upload_photo.html',)
             else:
                 form = UserPhotoForm()
-                flag=True
+            flag=True
             topic = photo_user.topic
             print(topic)
             return render(request, 'events/upload_photo.html', {'form':form, 'flag':flag, 'topic': topic })
