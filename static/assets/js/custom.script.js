@@ -41,12 +41,12 @@
                 "time": {
                     "Days": {
                         "text": "Days",
-                        "color": "#ec398b",
+                        "color": "#00acee",
                         "show": true
                     },
                     "Hours": {
                         "text": "Hours",
-                        "color": "#fac400",
+                        "color": "#00acee",
                         "show": true
                     },
                     "Minutes": {
@@ -56,7 +56,7 @@
                     },
                     "Seconds": {
                         "text": "Seconds",
-                        "color": "#483fa1",
+                        "color": "#00acee",
                         "show": true
                     }
                 }
@@ -90,8 +90,8 @@
         var lgxCounter = $('.lgx-counter');
         if (lgxCounter.length) {
             lgxCounter.counterUp({
-                delay: 10,
-                time: 5000
+                delay: 5,
+                time: 500
             });
         }
         /*=========================================================================
@@ -629,6 +629,17 @@
                 }
             }
         });
+        $('#myVideoCloseButton').click(function(){
+			 $('.myVideoClass').each(function(){
+        var el_src = $(this).attr("src");
+        $(this).attr("src",el_src);
+      });
+		});
+
+		$('.lgx-scroll').click(function(){
+			console.log("toggle working");
+        	 $('#toggle-button').click();
+		});
 
         /*=========================================================================
          ===  Start Contact Form Validation And Ajax Submission END

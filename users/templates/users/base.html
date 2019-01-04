@@ -1,93 +1,92 @@
 {% load crispy_forms_tags %}
 {% load static %}
-<html>
-    <head>
-        <title>Nakshatra</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <!-- The above 3 meta tags *must* come first in the head -->
+<!doctype html>
+<html class="no-js" lang="en">
 
-        <!-- SITE TITLE -->
-        <!--<title>Emeet</title>-->
-        <meta name="description" content="Responsive EventHunt HTML Template"/>
-        <meta name="keywords" content="Nakshatra MCA NIT CALICUT"/>
-        <meta name="keywords" content="Bootstrap3, Event,  Conference, Meetup, Template, Responsive, HTML5"/>
-        <meta name="author" content="themearth.com"/>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- The above 3 meta tags *must* come first in the head -->
 
-        <!-- twitter card starts from here, if you don't need remove this section -->
-        <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:site" content="@yourtwitterusername"/>
-        <meta name="twitter:creator" content="@yourtwitterusername"/>
-        <meta name="twitter:url" content="../../../../../yourdomain.com/index.html"/>
-        <meta name="twitter:title" content="Your home page title, max 140 char"/>
-        <!-- maximum 140 char -->
-        <meta name="twitter:description" content="Your site description, maximum 140 char "/>
-        <!-- maximum 140 char -->
-        <meta name="twitter:image" content="assets/img/twittercardimg/twittercard-280-150.jpg"/>
-        <!-- when you post this page url in twitter , this image will be shown -->
-        <!-- twitter card ends from here -->
-
-        <!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
-        <meta property="og:title" content="Your home page title"/>
-        <meta property="og:url" content="http://your domain here.com"/>
-        <meta property="og:locale" content="en_US"/>
-        <meta property="og:site_name" content="Your site name here"/>
-        <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="assets/img/opengraph/fbphoto.jpg"/>
-        <!-- when you post this page url in facebook , this image will be shown -->
-        <!-- facebook open graph ends from here -->
-
-        <!--  FAVICON AND TOUCH ICONS -->
-        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}"/>
-        <!-- this icon shows in browser toolbar -->
-        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}"/>
-        <!-- this icon shows in browser toolbar -->
-        <!--<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">-->
-        <!--<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">-->
-        <!--<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">-->
-        <!--<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">-->
-        <!--<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">-->
-        <!--<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">-->
-        <!--<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">-->
-        <!--<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">-->
-        <!--<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">-->
-        <!--<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">-->
-        <!--<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">-->
-        <!--<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">-->
-        <!--<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">-->
-        <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
-
-        <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css' %}" media="all"/>
-
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="{% static 'assets/libs/fontawesome/css/font-awesome.min.css' %}" media="all"/>
-
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="{% static 'assets/libs/maginificpopup/magnific-popup.css' %}" media="all"/>
-
-        <!-- Time Circle -->
-        <link rel="stylesheet" href="{% static 'assets/libs/timer/TimeCircles.css' %}" media="all"/>
-
-        <!-- OWL CAROUSEL CSS -->
-        <link rel="stylesheet" href="{% static 'assets/libs/owlcarousel/owl.carousel.min.css' %}" media="all" />
-        <link rel="stylesheet" href="{% static 'assets/libs/owlcarousel/owl.theme.default.min.css' %}" media="all" />
-
-        <!-- GOOGLE FONT -->
-        <link rel="stylesheet" type="text/css" href="../../../../../fonts.googleapis.com/cssee12?family=Oswald:400,700%7cRaleway:300,400,400i,500,600,700,900"/>
-
-        <!-- MASTER  STYLESHEET  -->
-        <link id="lgx-master-style" rel="stylesheet" href="{% static 'assets/css/style-default.min.css' %}" media="all"/>
-
-        <!-- MODERNIZER CSS  -->
-        <script src="{% static 'assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
-
-        <!-- <link rel="stylesheet" href="{% static 'assets/css/style.css'%}"> -->
+    <!-- SITE TITLE -->
+    <title>Nakshatra'19 - All India MCA Meet</title>
+    <meta name="description" content="Nakshatra 2k19 - All India MCA Meet"/>
+    <meta name="keywords" content="Nakshatra, MCA, 2k19, 19, Nit, calicut, Nakshatra 2k19 ,All India MCA Meet"/>
+    <meta name="author" content="www.nakshatra19.com"/>
 
 
-    <style>
+    <!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
+    <meta property="og:title" content="Nakshatra 2k19"/>
+    <meta property="og:url" content="www.nakshatra19.com"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:site_name" content="Nakshatra 2k19"/>
+    <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="{% static 'assets/img/favicon.png'%}"/>
+    <!-- when you post this page url in facebook , this image will be shown -->
+    <!-- facebook open graph ends from here -->
+
+    <!--  FAVICON AND TOUCH ICONS -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}"/>
+    <!-- this icon shows in browser toolbar -->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}"/>
+    <!-- this icon shows in browser toolbar -->
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png"> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Open+Sans" rel="stylesheet">
+
+
+    <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{% static 'assets/libs/bootstrap/css/bootstrap.min.css' %}" media="all"/>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{% static 'assets/libs/fontawesome/css/font-awesome.min.css' %}" media="all"/>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{% static 'assets/libs/maginificpopup/magnific-popup.css' %}" media="all"/>
+
+    <!-- Time Circle -->
+    <link rel="stylesheet" href="{% static 'assets/libs/timer/TimeCircles.css' %}" media="all"/>
+
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="{% static 'assets/libs/owlcarousel/owl.carousel.min.css' %}" media="all" />
+    <link rel="stylesheet" href="{% static 'assets/libs/owlcarousel/owl.theme.default.min.css' %}" media="all" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" type="text/css" href="../../../../../fonts.googleapis.com/cssee12?family=Oswald:400,700%7cRaleway:300,400,400i,500,600,700,900"/>
+
+    <!-- MASTER  STYLESHEET  -->
+    <link id="lgx-master-style" rel="stylesheet" href="{% static 'assets/css/style-default.min.css' %}" media="all"/>
+
+    <!-- MODERNIZER CSS  -->
+    <script src="{% static 'assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet' href='https://unpkg.com/aos@2.3.0/dist/aos.css'>   
+
+    <link rel="stylesheet" href="{% static 'assets/aos-animations/css/style.css'%}">
+
+
+
+     <style>
         /* preloader - start
         ================================================== */
         #preloader {
@@ -98,7 +97,7 @@
         z-index: 1005;
         position: fixed;
         overflow: visible;
-        background: #fff url("{% static 'assets/preloader.gif'%}") no-repeat center center; }
+        background: #fff url("{% static 'assets/preloader.gif' %}") no-repeat center center; }
 
         /* preloader - end
         ================================================== */
@@ -109,168 +108,161 @@
         color: darkred;
     }
     </style>
-    </head>
-    <body class="home">
-		<!-- preloader - start -->
-		<div id="preloader"></div>
-		<!-- preloader - end -->
-            <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-                your browser</a> to improve your experience.</p>
-            <![endif]-->
-            
-            <div class="lgx-container ">
-            <!-- ***  ADD YOUR SITE CONTENT HERE *** -->
-            
-            
-            <!--HEADER-->
-            <header>
-                <div id="lgx-header" class="lgx-header">
-                    <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed "> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
-                        <div class="lgx-container-fluid"> <!--lgx-container-fluid-->
-                            <nav class="navbar navbar-default lgx-navbar">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <div class="lgx-logo">
-                                        <a href="{% url 'index' %}" class="lgx-scroll">
-                                            <img src="{% static 'assets/img/logo.png' %}" alt="Eventhunt Logo"/>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="navbar" class="navbar-collapse collapse lgx-collapse">
-                                    <ul class="nav navbar-nav lgx-nav">
-                                        
-                                        {% url 'index' as index_url %}
-                                        {% if request.get_full_path == index_url %}
-                                        <li>
-                                                <a class="lgx-scroll" href="#lgx-header" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                                            <li>
-                                        <li><a class="lgx-scroll" href="#lgx-speakers" data-toggle="collapse" data-target=".navbar-collapse.show">Speaker</a></li>
-                                        <li><a class="lgx-scroll" href="#lgx-schedule" data-toggle="collapse" data-target=".navbar-collapse.show">Schedule</a></li>
-                                        <li><a class="lgx-scroll" href="#lgx-sponsors" data-toggle="collapse" data-target=".navbar-collapse.show">Sponsors</a></li>
-                                        {% else %}
-                                        <li>
-                                                <a class="lgx-scroll" href="{% url 'index' %}" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                                            <li>
-                                        {% endif %}
-                                        <!-- <li><a class="lgx-scroll" href="#lgx-news" data-toggle="collapse" data-target=".navbar-collapse.show">News</a></li> -->
-                                        <!-- <li><a class="lgx-scroll" href="contact.html" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li> -->
-                                        {% if user.is_authenticated %}
-                                        <li><a class="lgx-scroll" href="{% url 'profile' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Profile</a></li>
-                                            <li><a class="lgx-scroll" href="{% url 'logout' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Logout</a></li>
-                                        {% else %}
-                                        <li><a class="lgx-scroll" href="{% url 'login' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Login</a></li>
-                                        <li><a class="lgx-scroll" href="{% url 'register' %}" data-toggle="collapse" data-target=".navbar-collapse.show">Register</a></li>
-                                        {% endif %}
-                                        </ul>
-                                </div><!--/.nav-collapse -->
-                            </nav>
+ 
+</head>
+
+<body class="home">
+<div id="preloader"></div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="lgx-container ">
+<!-- ***  ADD YOUR SITE CONTENT HERE *** -->
+
+<!--HEADER-->
+<header>
+    <div id="lgx-header" class="lgx-header">
+        <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed "> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
+            <div class="lgx-container-fluid"> <!--lgx-container-fluid-->
+                <nav class="navbar navbar-default lgx-navbar">
+                    <div class="navbar-header">
+                        <a id="toggle-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <div class="lgx-logo">
+                            <a href="{% url 'index' %}" class="lgx-scroll">
+                                <img src="{% static 'assets/img/full-logo.png' %}" alt="Eventhunt Logo" style="max-width: 200px;" />
+                            </a>
                         </div>
-                        <!-- //.CONTAINER -->
                     </div>
-                </div>
-            </header>
-            <!--HEADER END-->
+                    <div id="navbar" class="navbar-collapse collapse lgx-collapse">
+                        <ul class="nav navbar-nav lgx-nav">
+                            <li>
+                                <a class="lgx-scroll" href="#lgx-header" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                            <li>
+                            <li><a class="lgx-scroll" href="#schedule-link" data-toggle="collapse" data-target=".navbar-collapse.show">Events</a></li>
+                            <li><a class="lgx-scroll" href="#sponsors-link" data-toggle="collapse" data-target=".navbar-collapse.show">Sponsors</a></li>
+                            <li><a class="lgx-scroll" href="#photo-gallery-link" data-toggle="collapse" data-target=".navbar-collapse.show">Gallery</a></li>
+                            <li><a class="lgx-scroll" href="#about-link" data-toggle="collapse" data-target=".navbar-collapse.show">About</a></li>
+                            <li><a class="lgx-scroll" href="#travel-info-link" data-toggle="collapse" data-target=".navbar-collapse.show">Contact Us</a></li>
+
+                            <!-- <li><a class="lgx-scroll" href="#lgx-news" data-toggle="collapse" data-target=".navbar-collapse.show">News</a></li>
+                            <li><a class="lgx-scroll" href="contact.html" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li> -->
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </nav>
+            </div>
+            <!-- //.CONTAINER -->
+        </div>
+    </div>
+</header>
+<!--HEADER END-->
             
 
                     
                     {% block content %}
                     {% endblock %}
 
-
-
 <!--FOOTER-->
 <footer>
-        <div id="lgx-footer" class="lgx-footer"> <!--lgx-footer-white-->
-            <div class="lgx-inner-footer">
-                <div class="lgx-subscriber-area ">
-                    <div class="container">
-                        <div class="lgx-subscriber-inner">  <!--lgx-subscriber-inner-indiv-->
-                            <h3 class="subscriber-title">Join Newsletter</h3>
-                            <form class="lgx-subscribe-form" >
-                                <div class="form-group form-group-email">
-                                    <input type="email" id="subscribe" placeholder="Enter your email Address  ..." class="form-control lgx-input-form form-control"  />
-                                </div>
-                                <div class="form-group form-group-submit">
-                                    <button type="submit" name="lgx-submit" id="lgx-submit" class="lgx-btn lgx-submit"><span>Subscribe</span></button>
-                                </div>
-                            </form> <!--//.SUBSCRIBE-->
-                        </div>
-                    </div>
-                </div>
+    <div id="lgx-footer" class="lgx-footer"> <!--lgx-footer-white-->
+        <div class="lgx-inner-footer">
+            <!-- <div class="lgx-subscriber-area ">
                 <div class="container">
-                    <div class="lgx-footer-area">
-                        <div class="lgx-footer-single">
-                            <a class="logo" href="index.html"><img src="{% static 'assets/img/footer-logo.png'%}" alt="Logo"></a>
-                        </div> <!--//footer-area-->
-                        <div class="lgx-footer-single">
-                            <h3 class="footer-title">Venue Location </h3>
-                            <h4 class="date">
-                                18 - 21 December, 2019
-                            </h4>
-                            <address>
-                                85 Golden Street, Darlinghurst <br>
-                                ERP 2019, United States
-                            </address>
-                            <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> View Map location</a>
-                        </div>
-                        <div class="lgx-footer-single">
-                            <h3 class="footer-title">Social Connection</h3>
-                            <p class="text">
-                                You should connect social area <br> for Any update
-                            </p>
-                            <ul class="list-inline lgx-social-footer">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                        <!--<div class="lgx-footer-single">
-                            <h2 class="footer-title">Instagram Feed</h2>
-                            <div id="instafeed">
+                    <div class="lgx-subscriber-inner">
+                        <h3 class="subscriber-title">Join Newsletter</h3>
+                        <form class="lgx-subscribe-form" >
+                            <div class="form-group form-group-email">
+                                <input type="email" id="subscribe" placeholder="Enter your email Address  ..." class="form-control lgx-input-form form-control"  />
                             </div>
-                        </div>-->
-                    </div>
-                    <!-- Modal-->
-                    <div id="lgx-modal-map" class="modal fade lgx-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="lgxmapcanvas map-canvas-default" id="map_canvas"> </div>
-                                </div>
+                            <div class="form-group form-group-submit">
+                                <button type="submit" name="lgx-submit" id="lgx-submit" class="lgx-btn lgx-submit"><span>Subscribe</span></button>
                             </div>
-                        </div>
-                    </div> <!-- //.Modal-->
-    
-                    <div class="lgx-footer-bottom">
-                        <div class="lgx-copyright">
-                            <p> <span>©</span> 2018 EventHunt is powered by <a href="../../../../../www.themearth.com/index.html">themearth.</a> The property of their owners.</p>
-                        </div>
+                        </form>
                     </div>
-    
                 </div>
-                <!-- //.CONTAINER -->
-            </div>
-            <!-- //.footer Middle -->
-        </div>
-    </footer>
-    <!--FOOTER END-->
-    
+            </div> -->
+            <div class="container">
+                <div class="lgx-footer-area">
+                    <div class="lgx-footer-single">
+                        <a class="logo" href="{% url 'index'%}"><img src="{% static 'assets/img/mca_final.png' %}" alt="Logo"></a>
+                    </div> <!--//footer-area-->
+                    <div class="lgx-footer-single">
+                        <!-- <h3 class="footer-title">Venue Location </h3>
+                        <h4 class="date">
+                            2nd and 3rd February, 2019
+                        </h4>
+                        <address>
+                            National Institute Of Technology, <br>
+                            Calicut, Kerala
+                        </address>
+                        <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> View location on Google maps</a> -->
+                        <h3 class="footer-title">Phone </h3>
+                        <address>
+                            Harshit Garg : 7838146755 <br>
+                            Sayantani Nandi : 7980650779 <br>
+                        </address>
+                        
+                    </div>
+                    <div class="lgx-footer-single">
+                        <h3 class="footer-title">Social Connection</h3>
+                        <ul class="list-inline lgx-social-footer">
+                            <li><a href="https://www.facebook.com/NakshatraNITC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <!-- <li><a href="https://twitter.com/Nakshatra_2k18"  target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                            <li><a href="https://www.instagram.com/nakshatra_nitc/"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> -->
+                        </ul>
+                        <h3 class="footer-title">Email </h3>
+                        <address>
+                            info@nakshatra19.com <br>
+                        </address>
+                    </div>
+                    <!--<div class="lgx-footer-single">
+                        <h2 class="footer-title">Instagram Feed</h2>
+                        <div id="instafeed">
+                        </div>
+                    </div>-->
+                </div>
+                <!-- Modal-->
+                <div id="lgx-modal-map" class="modal fade lgx-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="lgxmapcanvas map-canvas-default" id="map_canvas">
+                                <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="389" id="gmap_canvas" src="https://maps.google.com/maps?q=nit%20caliut&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign/"></a></div><style>.mapouter{text-align:right;height:389px;width:910px;}.gmap_canvas {overflow:hidden;background:none!important;height:389px;width:910px;}</style></div> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- //.Modal-->
 
+                <div class="lgx-footer-bottom">
+                    <div class="lgx-copyright">
+                        <p> <span>©</span> 2019 -  <a href="http://www.nitc.ac.in" target="_blank">NITC</a>-MCA All rights reserved.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //.CONTAINER -->
+        </div>
+        <!-- //.footer Middle -->
     </div>
-    <!--//.LGX SITE CONTAINER-->
-        <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
+</footer>
+<!--FOOTER END-->
+
+
+</div>
+<!--//.LGX SITE CONTAINER-->
+<!-- *** ADD YOUR SITE SCRIPT HERE *** -->
 <!-- JQUERY  -->
 <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
 
@@ -330,5 +322,10 @@
   // preloader - end
   // --------------------------------------------------
 </script>
+
+<script src='https://unpkg.com/aos@2.3.0/dist/aos.js'></script>
+<script  src="{% static 'assets/aos-animations/js/index.js'%}"></script>
+
+
 </body>
 </html>

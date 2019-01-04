@@ -2,104 +2,101 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-
-    <!--BANNER-->
-    <section>
-                        <!-- particles.js container -->
-<div id="particles-js"></div>
-
-<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-	<link rel="stylesheet" href="{% static 'assets/test2/css/style.css'%}">
+<!--BANNER-->
+<section>
+    <!-- particles.js container --> 
+    <div id="particles-js"></div>
+    
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="{% static  'assets/test2/css/style.css' %}">
+    
     <script  src="{% static 'assets/test2/js/index.js' %}"></script>
+            
             <div id="lgx-parallax-banner" class="lgx-banner lgx-banner-parallax"> <!--lgx-about-bottom-->
                 <div class="lgx-section">
                     <div id="layer-wrapper" class="lgx-item-parallax-banner">
-
-                        <div id="object1" class="bglayer1 hidden-sm hidden-xs">
-                            <img src="{% static 'assets/img/parallax/3.png' %}" alt="">
+    
+                        <div id="object1" class="bglayer1 hidden-sm hidden-xs col-md-sm">
+                            <img src="{% static 'assets/img/parallax/3.png' %}" alt="" >
                         </div>
                         <div id="object5" class="rightlayer1 hidden-sm hidden-xs">
-                            <img src="{% static 'assets/img/parallax/4.png' %}" alt="">
+                            <img src="{% static 'assets/img/parallax/4.png' %}" alt=""  style="opacity: 0.5">
                         </div>
                         <div id="object2" class="bglayer2 hidden-sm hidden-xs">
-                            <img src="{% static 'assets/img/parallax/5.png' %}" alt="">
+                            <img src="{% static  'assets/img/parallax/5.png' %}" alt=""  style="opacity: 0.5">
                         </div>
                         <div id="object6" class="rightlayer2shade hidden-sm hidden-xs">
-                            <img src="{% static 'assets/img/parallax/7.png' %}" alt="">
+                            <img src="{% static  'assets/img/parallax/7.png' %}" alt=""  style="opacity: 0.5">
                         </div>
-                        <div id="object7" class="rightlayer2 hidden-sm hidden-xs">
+                        <!-- <div id="object7" class="rightlayer2 hidden-sm hidden-xs">
                             <img src="{% static 'assets/img/parallax/6.png' %}" alt="">
-                        </div>
-
+                        </div> -->
                         <div class="banner-content">
-                                <div class="lgx-hover-link">
-                                    <div class="lgx-vertical">
-                                        <div class="lgx-banner-info lgx-banner-info-center"> <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg--> <!--banner-info-margin-->
-                                            <div class="circular-countdown-area">
-                                                <div id="circular-countdown" data-date="2019-02-10 00:00:00" ></div>
-                                            </div>
-                                            <h2 class="title">NAKSHATRA <span><b>2</b><b>k</b><b>1</b><b>9</b></span></h2>
-                                            <h3 class="location"><i class="fa fa-map-marker"></i> 21 King Street, Dhaka 1205, Bangladesh.</h3>
-                                            <h3 class="date"><i class="fa fa-calendar"></i> 23-27 September, 2018</h3>
-                                            <div class="action-area">
-                                                <div class="lgx-video-area">
-                                                    <a class="lgx-btn lgx-btn-red" href="{% url 'register' %}">Register</a>
-                                                    <p class="video-area"><a id="myModalLabel" class="icon" href="#" data-toggle="modal" data-target="#lgx-modal">
-                                                        <i class="fa fa-play " aria-hidden="true"></i>
-                                                    </a> Watch Promo Video</p>
-                                                    <!-- Modal-->
-                                                    <div id="lgx-modal" class="modal fade lgx-modal">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <iframe id="modalvideo" src="../../../../../www.youtube.com/embed/oSPR5Go05Vg" allowfullscreen></iframe>
-                                                                </div>
+                            <div class="lgx-hover-link">
+                                <div class="lgx-vertical">
+                                    <div class="lgx-banner-info lgx-banner-info-center text-center" > <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg--> <!--banner-info-margin-->
+                                    
+                                        
+                                        <!-- <div class="circular-countdown-area">
+                                            <div id="circular-countdown" data-date="2019-02-02 00:00:00" ></div>
+                                        </div> -->
+                                        
+                                        <h1 class="title" style="margin:0px;padding:0px;font-family: 'Audiowide'; color:#fff;font-size: 50px">NAKSHATRA </h1>
+                                            <h2 style="margin:0px;padding:0px;font-family: 'Open Sans'; color:#fff;font-size: 20px">NATIONAL INSTITUTE OF TECHNOLOGY, CALICUT</h2>
+                                        <!-- <a class="lgx-btn lgx-btn-red" href="{% url 'register' %}">Register</a> -->
+                                        <h1 class="location">All India MCA Meet</h1>
+                                        <h3 class="date"><i class="fa fa-calendar"></i>&nbsp;&nbsp; 2nd and 3rd FEB</h3>
+                                        <div class="action-area  text-center">
+                                            <a class="lgx-btn lgx-btn-lightgrey" href="#">Registrations Open Soon </a>
+                                            <!-- <div class="lgx-video-area">
+                                                <a class="lgx-btn lgx-btn-red" href="{% url 'register' %}">Register</a>
+                                                <p class="video-area"><a id="myModalLabel" class="icon" href="#" data-toggle="modal" data-target="#lgx-modal">
+                                                    <i class="fa fa-play " aria-hidden="true"></i>
+                                                </a> Watch Promo Video</p>
+                                                
+                                                <div id="lgx-modal" class="modal fade lgx-modal">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" id="myVideoCloseButton" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <iframe width="420" height="315" class="myVideoClass" src="https://www.youtube.com/embed/es9m6LFK6DI" allowfullscreen></iframe>
                                                             </div>
                                                         </div>
-                                                    </div> <!-- //.Modal-->
-                                                </div>
-                                            </div>
+                                                    </div>
+                                                </div> 
+                                            </div> -->
+                                            <!-- <div class="lgx-footer-single text-center">
+                                                <ul class="list-inline lgx-social-footer text-center">
+                                                    <li><a href="https://www.facebook.com/NakshatraNITC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                    <li><a href="https://twitter.com/Nakshatra_2k18"  target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                    <li><a href="https://www.instagram.com/nakshatra_nitc/"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                                </ul>
+                                            </div> -->
+    
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+    
                     </div>
-                    <!-- //.INNER -->
                 </div>
-            </section>
-            <!--BANNER END-->
-
-
-
-
-        <!--ABOUT-->
-        <section>
-            <div id="lgx-about" class="lgx-about lgx-about2">
+                <!-- //.INNER -->
+            </div>
+            <section>
+            <div id="lgx-countdowns" class="lgx-countdowns lgx-countdowns4"> <!--lgx-countdowns3 lgx-countdowns4-->
                 <div class="lgx-inner">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-offset-5 col-sm-12 col-md-7">
-                                <div class="lgx-about-content-area">
-                                    <div class="lgx-heading">
-                                        <h2 class="heading">Happy New Year 2019</h2>
-                                        <h3 class="subheading">Why Happy New Year 2019 ?</h3>
-                                    </div>
-                                    <div class="lgx-about-content">
-                                        <p class="text">
-                                            Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper. Aenean are ultricies mi senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae vitae.
-                                        </p>
-                                        <div class="section-btn-area">
-                                            <a class="lgx-btn" href="about.html">More About</a>
-                                            <a class="lgx-btn lgx-btn-red lgx-scroll" href="#lgx-registration">Buy Ticket</a>
-                                        </div>
-                                    </div>
+                            <div class="col-sm-12">
+                                <div class="circular-countdown-area">
+                                    <div id="circular-countdown" data-date="2019-02-02 00:00:00" ></div>
                                 </div>
                             </div>
                         </div>
@@ -107,11 +104,81 @@
                 </div><!-- //.INNER -->
             </div>
         </section>
-        <!--ABOUT END-->
-
-
+        </section>
+        <!--BANNER END-->
+        <!--countdown-->
+        
+        <!--countdown END-->
+    
+    
+    
+    
+        <!--MILESTONE-->
+        <section>
+            <div id="lgx-milestone-about" class="lgx-milestone-about">
+                <div class="lgx-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="lgx-milestone-area">
+                                    <div class="lgx-milestone">
+                                        <div class="milestone-inner">
+                                            <div class="lgx-content">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-3">
+                                                        <div class="lgx-counter-area">
+                                                            <img src="{% static  'assets/img/icons/2.png' %}" alt="teacher icon">
+                                                            <div class="counter-text">
+                                                                <span class="lgx-counter">30</span><span style="font-size: 50px;">+</span>
+                                                                <small>COLLEGES</small>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!--//.COL-->
+                                                    <div class="col-xs-12 col-sm-6 col-md-3">
+                                                        <div class="lgx-counter-area">
+                                                            <img src="{% static  'assets/img/icons/3.png' %}" alt="teacher icon">
+                                                            <div class="counter-text">
+                                                                <span class="lgx-counter">150</span><span style="font-size: 50px;">+</span>
+                                                                <small>PARTICIPANTS</small>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!--//.COL-->
+                                                    <div class="col-xs-12 col-sm-6 col-md-3">
+                                                        <div class="lgx-counter-area">
+                                                            <img src="{% static  'assets/img/icons/1.png' %}" alt="teacher icon">
+                                                            <div class="counter-text">
+                                                                <span class="lgx-counter">2</span>
+                                                                <small>DAYS</small>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!--//.COL-->
+                                                    
+                                                    
+                                                    <div class="col-xs-12 col-sm-6 col-md-3">
+                                                        <div class="lgx-counter-area">
+                                                            <img src="{% static  'assets/img/icons/4.png' %}" alt="teacher icon">
+                                                            <div class="counter-text">
+                                                                <span class="lgx-counter">12</span>
+                                                                <small>EVENTS</small>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!--//.COL-->
+                                                </div> <!--//.ROW-->
+                                            </div> <!--//. lgx CONTENT CONTENT-->
+                                        </div><!--//.lgx INNER-->
+                                    </div><!--//.Milestone End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- //.CONTAINER -->
+                </div><!-- //.INNER -->
+            </div>
+        </section>
+        <!--MILESTONE END-->
+    
+    
     <!--SPEAKERS-->
-    <section>
+    <!-- <section>
         <div id="lgx-speakers" class="lgx-speakers">
             <div class="lgx-inner">
                 <div class="container">
@@ -123,12 +190,11 @@
                             </div>
                         </div>
                     </div>
-                    <!--//.ROW-->
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="lgx-single-speaker lgx-single-speaker-circle">
                                 <figure>
-                                    <a class="profile-img" href="speakers.html"><img src="assets/img/speakers/speaker1.jpg" alt="speaker"/></a>
+                                    <a class="profile-img" href="speakers.html"><img src="{% static  'assets/img/speakers/speaker1.jpg" alt="speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
                                             <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
@@ -147,7 +213,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="lgx-single-speaker lgx-single-speaker-circle">
                                 <figure>
-                                    <a class="profile-img" href="speakers.html"><img src="assets/img/speakers/speaker2.jpg" alt="speaker"/></a>
+                                    <a class="profile-img" href="speakers.html"><img src="{% static  'assets/img/speakers/speaker2.jpg" alt="speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
                                             <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
@@ -166,7 +232,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="lgx-single-speaker lgx-single-speaker-circle">
                                 <figure>
-                                    <a class="profile-img" href="speakers.html"><img src="assets/img/speakers/speaker3.jpg" alt="speaker"/></a>
+                                    <a class="profile-img" href="speakers.html"><img src="{% static  'assets/img/speakers/speaker3.jpg" alt="speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
                                             <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
@@ -185,7 +251,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="lgx-single-speaker lgx-single-speaker-circle">
                                 <figure>
-                                    <a class="profile-img" href="speakers.html"><img src="assets/img/speakers/speaker4.jpg" alt="speaker"/></a>
+                                    <a class="profile-img" href="speakers.html"><img src="{% static  'assets/img/speakers/speaker4.jpg" alt="speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
                                             <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
@@ -204,7 +270,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="lgx-single-speaker lgx-single-speaker-circle">
                                 <figure>
-                                    <a class="profile-img" href="speakers.html"><img src="assets/img/speakers/speaker5.jpg" alt="speaker"/></a>
+                                    <a class="profile-img" href="speakers.html"><img src="{% static  'assets/img/speakers/speaker5.jpg" alt="speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
                                             <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
@@ -223,7 +289,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="lgx-single-speaker lgx-single-speaker-circle">
                                 <figure>
-                                    <a class="profile-img" href="speakers.html"><img src="assets/img/speakers/speaker6.jpg" alt="speaker"/></a>
+                                    <a class="profile-img" href="speakers.html"><img src="{% static 'assets/img/speakers/speaker6.jpg" alt="speaker"/></a>
                                     <figcaption>
                                         <div class="social-group">
                                             <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>
@@ -240,463 +306,495 @@
                             </div>
                         </div>
                     </div>
-                    <!--//.ROW-->
                     <div class="section-btn-area">
                         <a class="lgx-btn lgx-btn-big" href="speakers.html">More Speakers</a>
                     </div>
                 </div>
-                <!-- //.CONTAINER -->
             </div>
-            <!-- //.INNER -->
         </div>
-    </section>
+    </section> -->
     <!--SPEAKERS END-->
+    
+    
+    
+    
+    <div id="schedule-link"></div>
 
 
-
-
-
-    <!--SCHEDULE-->
-    <section>
-        <div id="lgx-schedule" class="lgx-schedule lgx-schedule2">
-            <div class="lgx-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="lgx-heading lgx-heading-white">
-                                <h2 class="heading">Event Schedule</h2>
-                                <h3 class="subheading">Welcome to the dedicated to building remarkable Schedule!</h3>
-                            </div>
+<!--SCHEDULE-->
+<section>
+    <div id="lgx-schedule" class="lgx-schedule lgx-schedule2" data-aos="slide-up">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-heading lgx-heading-white">
+                            <h2 class="heading">Events</h2>
+                            <!-- <h3 class="subheading">Welcome to the dedicated to building remarkable Events</h3> -->
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="lgx-tab"> <!--lgx-tab2-->
-                                <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">  <!--lgx-nav-nogap lgx-nav-colorful-->
-                                    <li class="active"><a data-toggle="pill" href="#home"><h3>First <span>Day</span></h3> <p><span>29 </span>Nov, 2019</p></a></li>
-                                    <li><a data-toggle="pill" href="#menu1"><h3>Second <span>Day</span></h3> <p><span>28 </span>Jul, 2019</p></a></li>
-                                    <li><a data-toggle="pill" href="#menu2"><h3>Third <span>Day</span></h3> <p><span>29 </span>Nov, 2019</p></a></li>
-                                    <li><a data-toggle="pill" href="#menu3"><h3>Fourth <span>Day</span></h3> <p><span>30 </span>Dec, 2019</p></a></li>
-                                </ul>
-                                <div class="tab-content lgx-tab-content">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-tab"> <!--lgx-tab2-->
+                            <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">  <!--lgx-nav-nogap lgx-nav-colorful-->
+                                <li class="active"><a data-toggle="pill" href="#home"><h3>Technical</h3> <!-- <p><span>29 </span>Nov, 2019</p> --></a></li>
+                                <li><a data-toggle="pill" href="#menu1"><h3>NON-TECHNICAL</h3><!--  <p><span>28 </span>Jul, 2019</p> --></a></li>
+                                <li><a data-toggle="pill" href="#menu2"><h3>ONLINE</h3><!--  <p><span>29 </span>Nov, 2019</p> --></a></li>
+                                <li><a data-toggle="pill" href="#menu3"><h3>MAIN</h3><!--  <p><span>30 </span>Dec, 2019</p> --></a></li>
+                            </ul>
+                            <div class="tab-content lgx-tab-content">
 
 
-                                    <div id="home" class="tab-pane fade in active">
+                                <div id="home" class="tab-pane fade in active">
 
-                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingOne">
-                                                    <div class="panel-title">
-                                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Wait is Over! Stony Brook Captures Conference</h3>
-                                                                    <h4 class="author-info">By <span>Riaz Sagar</span> , Logichunt Inc.</h4>
-                                                                </div>
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <div class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Kode Tantra</h3>
+                                                                <!-- <h4 class="author-info">By <span>Riaz Sagar</span> , Logichunt Inc.</h4> -->
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingTwo">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">10:30 <span>Am</span> - 11.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Team With At Least Three Conference Titles</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        If you've got 99 problems but coding ain't one, then this one's for you. Get your game face on and come in guns blazing, cause you will be battling it out with the finest that every college has to offer. Prepare yourselves for solving mind rattling problems on the road to victory.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 2</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span> --> </h4>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingThree">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author author-multi">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                    <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
-                                                                    <img src="assets/img/schedule/speaker3.jpg" alt="Speaker"/>
-                                                                    <img src="assets/img/schedule/speaker4.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">11:30 <span>Am</span> - 01.30 <span>Pm</span></h4>
-                                                                    <h3 class="title">Building an Awesome Community on Your Website</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , <span>Riaz Sagar</span> & <span>Devid Smith</span> , Design Apple</h4>
-                                                                </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">10:30 <span>Am</span> - 11.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Bug Buster</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingfour">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker4.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">02:00 <span>Am</span> - 03.30 <span>Pm</span></h4>
-                                                                    <h3 class="title">Hungry Shawnee boys soccer team eyeing conference, sectional title in 2019</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Hold up! It's not a bug, it's just an undocumented feature! It's now your job to point these 'features' out. Beware though, you may not find them as easily as you think. Legends say that the mythical creatures known as programmers stay up for days trying to find the ever elusive missing semicolon. Do you really wish to take on this deceptive quest?
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 2</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span>  --></h4>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingfive">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker5.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">03:45 <span>Am</span> - 04.00 <span>Pm</span></h4>
-                                                                    <h3 class="title">Business World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author author-multi">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                                <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
+                                                                <img src="assets/img/schedule/speaker3.jpg" alt="Speaker"/>
+                                                                <img src="assets/img/schedule/speaker4.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">11:30 <span>Am</span> - 01.30 <span>Pm</span></h4> -->
+                                                                <h3 class="title">Enigma</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , <span>Riaz Sagar</span> & <span>Devid Smith</span> , Design Apple</h4> -->
                                                             </div>
-                                                        </a>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                                <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        So you think that you are a technology buff? Or are you a computer nerd? Come over and find out for yourselves. We've got all kinds of challenges to offer, and only the geekiest can sail past them all.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 2 </strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span>  --></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingfour">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker4.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">02:00 <span>Am</span> - 03.30 <span>Pm</span></h4> -->
+                                                                <h3 class="title">The Science of Deduction</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        The game is afoot! We are inviting all high functioning sociopaths to put their 'elementary' skills to the test. It's a thriller where the best detective will be decided on the most elaborate crime that they can commit. So bring out your magnifying glass and search for the right clues, since 'there is nothing more deceptive than an obvious fact'.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 2</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span>  --></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingfive">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="assets/img/schedule/speaker5.jpg" alt="Speaker"/>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">03:45 <span>Am</span> - 04.00 <span>Pm</span></h4>
+                                                                <h3 class="title">Business World Event Introduction</h3>
+                                                                <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+
+                                </div>
+
+
+                                <div id="menu1" class="tab-pane fade">
+
+                                    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne2">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author author-multi">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                                <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
+                                                                <img src="assets/img/schedule/speaker3.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Event X</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , <span>Riaz Sagar</span> & <span>Devid Smith</span> , Design Apple</h4> -->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                         ‘The true mystery of the world is the visible, not the invisible.’ Let’s not ruin the surprise by giving out the details. Something mysterious awaits.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 3</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span>  --></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingTwo2">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="true" aria-controls="collapseTwo2">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Quibble</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Bring your best grey cells to this party. Far from classroom notes, quibble is all about the world of logic and technique. Get ready for a roller coaster ride into the intense world of frolic and shenanigan.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 2</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span>  --></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingThree2">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="true" aria-controls="collapseThree2">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Switch and Wow</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        ‘Personality is an unbroken series of successful gestures.’ Bring out the best in you! Exhibit your special talents, wit and humanism to woo the audience. We would have a special focus on the "extraordinary” talent that you possess that makes one stand out. Unleash the beast in you
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants:1</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span> --> </h4>
                                                 </div>
                                             </div>
                                         </div>
 
-                                    </div>
 
-
-                                    <div id="menu1" class="tab-pane fade">
-
-                                        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingOne2">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author author-multi">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                    <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
-                                                                    <img src="assets/img/schedule/speaker3.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">The Wait is Over! Stony Brook Captures First Conference Title</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , <span>Riaz Sagar</span> & <span>Devid Smith</span> , Design Apple</h4>
-                                                                </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFour2">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour2" aria-expanded="true" aria-controls="collapseFour2">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">The Convergence</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseOne2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingTwo2">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="true" aria-controls="collapseTwo2">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingThree2">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="true" aria-controls="collapseThree2">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                            <div id="collapseFour2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        This event has been meticulously planned and includes various technical and non-technical tasks solely designed to make learning fun and at the same time provide exhilaration. It promises to cater entertainment, enjoyment, amusement and knowledge, all in a single plate. Stay connected to know more about it.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 4</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span> --> </h4>
                                                 </div>
                                             </div>
                                         </div>
 
+
+
+
                                     </div>
 
+                                </div>
 
-                                    <div id="menu2" class="tab-pane fade">
 
-                                        <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingOne3">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
+                                <div id="menu2" class="tab-pane fade">
+
+                                    <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne3">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Fotografie</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseOne3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingTwo3">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3" aria-expanded="true" aria-controls="collapseTwo3">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseTwo3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingThree3">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="true" aria-controls="collapseThree3">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                            <div id="collapseOne3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        A picture is worth a thousand words. We are waiting to hear what you say have got to say.
+                                                    </p>
+                                                    <!-- <h4 class="location"><strong>Participants:</strong>   Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4> -->
                                                 </div>
                                             </div>
                                         </div>
-
-                                    </div>
-
-
-                                    <div id="menu3" class="tab-pane fade">
-
-                                        <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingOne4">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingTwo3">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3" aria-expanded="true" aria-controls="collapseTwo3">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Code Knight</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseOne4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne4">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingTwo4">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseTwo4" aria-expanded="true" aria-controls="collapseTwo4">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseTwo4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo4">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel panel-default lgx-panel">
-                                                <div class="panel-heading" role="tab" id="headingThree4">
-                                                    <div class="panel-title">
-                                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree4" aria-expanded="true" aria-controls="collapseThree4">
-                                                            <div class="lgx-single-schedule">
-                                                                <div class="author">
-                                                                    <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
-                                                                    <h3 class="title">Digital World Event Introduction</h3>
-                                                                    <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseThree4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree4">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
-                                                    </div>
+                                            <div id="collapseTwo3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Coders from all over the nation will come together to battle it out and see who is the last man standing.
+                                                    </p>
+                                                    <!-- <h4 class="location"><strong>Location:</strong>   Hall 1, Building A , Golden Street , <span>Southafrica</span></h4> -->
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingThree3">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="true" aria-controls="collapseThree3">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">PUBG</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Stay Low, Go Fast, Kill First, Die Last, One Shot, One Kill, No Luck, All Skill.
+                                                    </p>
+                                                    <!-- <h4 class="location"><strong>Location:</strong>   Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4> -->
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+
+                                </div>
+
+
+                                <div id="menu3" class="tab-pane fade">
+
+                                    <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne4">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                                                        <div class="lgx-single-schedule">
+                                                            <!-- <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div> -->
+                                                            <div class="schedule-info">
+                                                                <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
+                                                                <h3 class="title">Degree in a day</h3>
+                                                                <!-- <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4> -->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne4">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        This is the primary attraction of Nakshatra’19. Exercise both your mind and body if you want to conquer this event. Come prepared with your running shoes and a sharp mind, because getting degree in just a day is not going to be easy as. Writing semester papers is not enough guys, think outside the box and try to be as swift as possible to glorify yourself.
+                                                    </p>
+                                                    <h4 class="location"><strong>Participants: 5</strong><!--   Hall 1, Building A , Golden Street , <span>Southafrica</span>  --></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingTwo4">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseTwo4" aria-expanded="true" aria-controls="collapseTwo4">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
+                                                                <h3 class="title">Digital World Event Introduction</h3>
+                                                                <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseTwo4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo4">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingThree4">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree4" aria-expanded="true" aria-controls="collapseThree4">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4>
+                                                                <h3 class="title">Digital World Event Introduction</h3>
+                                                                <h4 class="author-info">By <span>Joanna Smith</span> , Design Apple</h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseThree4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree4">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse flexitarian Truffaut synth art party deep v chillwave.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong>  Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--//.ROW-->
                 </div>
-                <!-- //.CONTAINER -->
+                <!--//.ROW-->
             </div>
-            <!-- //.INNER -->
+            <!-- //.CONTAINER -->
         </div>
-    </section>
-    <!--SCHEDULE END-->
-
-
-
+        <!-- //.INNER -->
+    </div>
+</section>
+<!--SCHEDULE END-->
+    
+    
+    
     <!--SPONSORED-->
-    <section>
+    <div id="sponsors-link"></div>
+    <section data-aos="slide-up">
         <div id="lgx-sponsors" class="lgx-sponsors lgx-sponsors-black">
             <div class="lgx-inner-bg">
                 <div class="lgx-inner">
@@ -704,8 +802,8 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Offcial Sponsonrs</h2>
-                                    <h3 class="subheading">Welcome to the dedicated to building remarkable Sponsores!</h3>
+                                    <h2 class="heading">Previous Sponsors</h2>
+                                    <!-- <h3 class="subheading">Welcome to the dedicated to building remarkable Sponsores!</h3> -->
                                 </div>
                             </div>
                         </div>
@@ -714,33 +812,42 @@
                             <div class="col-xs-12">
                                 <div class="sponsors-area sponsors-area-colorfull-border">
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor-sp3.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img  src="{% static 'assets/img/sponsors/10.png' %}" alt="sponsor"/></a>
                                     </div>
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor2.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/1.png' %}" alt="sponsor"/></a>
                                     </div>
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor-sp1.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/2.png' %}" alt="sponsor"/></a>
                                     </div>
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor5.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/3.png' %}" alt="sponsor"/></a>
                                     </div>
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor1.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/4.png' %}" alt="sponsor"/></a>
                                     </div>
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor3.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/5.png' %}" alt="sponsor"/></a>
                                     </div>
                                     <div class="single">
-                                        <a class="" href="#"><img src="assets/img/sponsors/sponsor4.png" alt="sponsor"/></a>
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/6.png' %}" alt="sponsor"/></a>
+                                    </div>
+                                    <div class="single">
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/7test.png' %}" alt="sponsor"/></a>
+                                    </div>
+                                    <div class="single">
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/8.png' %}" alt="sponsor"/></a>
+                                    </div>
+                                    <div class="single">
+                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/9.png' %}" alt="sponsor"/></a>
                                     </div>
                                 </div>
                             </div>
                             <!--//col-->
                         </div>
-                        <div class="section-btn-area sponsor-btn-area">
+                        <!-- <div class="section-btn-area sponsor-btn-area">
                             <a class="lgx-btn" href="#">Become A Sponsor</a>
-                        </div>
+                        </div> -->
                     </div>
                     <!--//container-->
                 </div>
@@ -749,22 +856,94 @@
         </div>
     </section>
     <!--SPONSORED END-->
-
-
-
-
-
-        <!--REGISTRATION-->
-        <section>
-            <div id="lgx-registration" class="lgx-registration"> <!--lgx-registration2 lgx-registration3 lgx-registration4-->
+    
+        <!--TESTIMONIALS -->
+        <!-- <section data-aos="slide-up">
+            <div id="lgx-testimonial" class="lgx-testimonial">
                 <div class="lgx-inner">
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="lgx-registration-area lgx-registration-area2"> <!--lgx-registration-area2 lgx-registration-area3 "-->
+                                <div class="lgx-heading">
+                                    <h2 class="heading">What Clients Say</h2>
+                                    <h3 class="subheading">Welcome to the dedicated to building remarkable Testimonials!</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="lgx-owltestimonial" class="lgx-owltestimonial lgx-owlnews">
+    
+                                <div class="item">
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant in the world</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div> 
+                                <div class="item">
+                                    <blockquote class="lgx-testi-single">
+                                        <p><span>This is the best Restaurant in the world</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="lgx-testi-single">
+                                        <p>This is the best Restaurant in the world Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
+                                        <div class="author">
+                                            <img src="{% static 'assets/img/testimonials/author1.jpg" alt="author">
+                                            <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                            <div class="rate">
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--TESTIMONIALS END-->
+    
+    
+    
+    
+    
+        <!--REGISTRATION-->
+        <!-- <section>
+            <div id="lgx-registration" class="lgx-registration">
+                <div class="lgx-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="lgx-registration-area lgx-registration-area2">
                                     <div class="lgx-single-registration">
                                         <div class="lgx-single-registration-inner">
-                                            <a class="icon" href="#"><img src="assets/img/icons/4.png" alt="ticket"/></a>
+                                            <a class="icon" href="#"><img src="{% static 'assets/img/icons/4.png" alt="ticket"/></a>
                                             <div class="single-top">
                                                 <h3 class="title">Personal</h3>
                                                 <h4 class="price"><i>$</i>59</h4>
@@ -783,7 +962,7 @@
                                     </div>
                                     <div class="lgx-single-registration recommended">
                                         <div class="lgx-single-registration-inner">
-                                            <a class="icon" href="#"><img src="assets/img/icons/3.png" alt="ticket"/></a>
+                                            <a class="icon" href="#"><img src="{% static 'assets/img/icons/3.png" alt="ticket"/></a>
                                             <div class="single-top">
                                                 <h3 class="title">Business</h3>
                                                 <h4 class="price"><i>$</i>89</h4>
@@ -802,7 +981,7 @@
                                     </div>
                                     <div class="lgx-single-registration">
                                         <div class="lgx-single-registration-inner">
-                                            <a class="icon" href="#"><img src="assets/img/icons/2.png" alt="ticket"/></a>
+                                            <a class="icon" href="#"><img src="{% static 'assets/img/icons/2.png" alt="ticket"/></a>
                                             <div class="single-top">
                                                 <h3 class="title">Premium</h3>
                                                 <h4 class="price"><i>$</i>99</h4>
@@ -822,15 +1001,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- //.CONTAINER -->
-                </div><!-- //.INNER -->
+                    </div>
+                </div>
             </div>
-        </section>
+        </section> -->
         <!--REGISTRATION END-->
-
-
+    
+    
         <!--PHOTO GALLERY-->
-        <section>
+        <div id="photo-gallery-link"></div>
+        <section data-aos="slide-up">
             <div id="lgx-photo-gallery" class="lgx-gallery-popup lgx-photo-gallery-normal lgx-photo-gallery-black">
                 <div class="lgx-inner">
                     <div class="container">
@@ -838,7 +1018,6 @@
                             <div class="col-xs-12">
                                 <div class="lgx-heading lgx-heading-white">
                                     <h2 class="heading">Photo Gallery</h2>
-                                    <h3 class="subheading">Welcome to the dedicated to building remarkable Sponsores!</h3>
                                 </div>
                             </div>
                         </div>
@@ -847,89 +1026,89 @@
                                 <div class="lgx-gallery-area">
                                     <div  class="lgx-gallery-single">
                                         <figure>
-                                            <img title="Memories One" src="assets/img/gallery/gallery4.jpg" alt="Memories one"/>
+                                            <img title="Memories One" src="{% static 'assets/img/gallery_new/7.jpg' %}" alt="Memories one"/>
                                             <figcaption class="lgx-figcaption">
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
-                                                        <a title="Memories One" href="assets/img/gallery/gallery4.jpg">
+                                                        <a title="Memories One" href="{% static 'assets/img/gallery_new/7.jpg' %}">
                                                             <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </div> <!--Single photo-->
+                                    </div>
                                     <div  class="lgx-gallery-single">
                                         <figure>
-                                            <img src="assets/img/gallery/gallery2.jpg" alt="Memories Two" title="Memories Two" />
+                                            <img src="{% static 'assets/img/gallery_new/1.JPG' %}" alt="Memories Two" title="Memories Two" />
                                             <figcaption class="lgx-figcaption">
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
-                                                        <a title="Memories Two" href="assets/img/gallery/gallery2.jpg">
+                                                        <a title="Memories Two" href="{% static 'assets/img/gallery_new/1.JPG' %}">
                                                             <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </div>  <!--Single photo-->
+                                    </div> 
                                     <div  class="lgx-gallery-single">
                                         <figure>
-                                            <img src="assets/img/gallery/gallery3.jpg" alt="Memories Three" title="Memories Three" />
+                                            <img src="{% static 'assets/img/gallery_new/3.JPG' %}" alt="Memories Three" title="Memories Three" />
                                             <figcaption class="lgx-figcaption">
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
-                                                        <a title="Memories Three" href="assets/img/gallery/gallery3.jpg">
+                                                        <a title="Memories Three" href="{% static 'assets/img/gallery_new/3.JPG' %}">
                                                             <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </div> <!--Single photo-->
+                                    </div>
                                     <div  class="lgx-gallery-single">
                                         <figure>
-                                            <img src="assets/img/gallery/gallery4.jpg" alt="Memories Four" title="Memories Four" />
+                                            <img src="{% static 'assets/img/gallery_new/4.JPG' %}" alt="Memories Four" title="Memories Four" />
                                             <figcaption class="lgx-figcaption">
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
-                                                        <a title="Memories Four" href="assets/img/gallery/gallery4.jpg">
+                                                        <a title="Memories Four" href="{% static 'assets/img/gallery_new/4.JPG' %}">
                                                             <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </div> <!--Single photo-->
+                                    </div>
                                     <div class="lgx-gallery-single">
                                         <figure>
-                                            <img src="assets/img/gallery/gallery5.jpg" alt="Memories Five" title="Memories Five" />
+                                            <img src="{% static 'assets/img/gallery_new/6.jpg' %}" alt="Memories Five" title="Memories Five" />
                                             <figcaption class="lgx-figcaption">
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
-                                                        <a title="Memories Five" href="assets/img/gallery/gallery5.jpg">
+                                                        <a title="Memories Five" href="{% static 'assets/img/gallery_new/6.jpg' %}">
                                                             <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </div> <!--Single photo-->
+                                    </div>
                                     <div class="lgx-gallery-single">
                                         <figure>
-                                            <img src="assets/img/gallery/gallery6.jpg" alt="Memories Six" title="Memories Six" />
+                                            <img src="{% static 'assets/img/gallery_new/2.jpg' %}" alt="Memories Six" title="Memories Six" />
                                             <figcaption class="lgx-figcaption">
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
-                                                        <a title="Memories Six" href="assets/img/gallery/gallery6.jpg">
+                                                        <a title="Memories Six" href="{% static 'assets/img/gallery_new/2.jpg' %}">
                                                             <i class="fa fa-chain-broken" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </figcaption>
                                         </figure>
-                                    </div> <!--Single photo-->
-
+                                    </div>
+    
                                 </div>
                             </div>
                         </div>
@@ -938,10 +1117,10 @@
             </div>
         </section>
         <!--PHOTO GALLERY END-->
-
-
+    
+    
         <!--News-->
-        <section>
+        <!-- <section>
             <div id="lgx-news" class="lgx-news">
                 <div class="lgx-inner">
                     <div class="container">
@@ -957,7 +1136,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="lgx-single-news">
                                     <figure>
-                                        <a href="news-single.html"><img src="assets/img/news/news1.jpg" alt=""></a>
+                                        <a href="news-single.html"><img src="{% static 'assets/img/news/news1.jpg" alt=""></a>
                                     </figure>
                                     <div class="single-news-info">
                                         <div class="meta-wrapper">
@@ -973,7 +1152,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="lgx-single-news">
                                     <figure>
-                                        <a href="news-single.html"><img src="assets/img/news/news3.jpg" alt=""></a>
+                                        <a href="news-single.html"><img src="{% static 'assets/img/news/news3.jpg" alt=""></a>
                                     </figure>
                                     <div class="single-news-info">
                                         <div class="meta-wrapper">
@@ -989,7 +1168,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="lgx-single-news">
                                     <figure>
-                                        <a href="news-single.html"><img src="assets/img/news/news2.jpg" alt=""></a>
+                                        <a href="news-single.html"><img src="{% static 'assets/img/news/news2.jpg" alt=""></a>
                                     </figure>
                                     <div class="single-news-info">
                                         <div class="meta-wrapper">
@@ -1006,24 +1185,88 @@
                         <div class="section-btn-area">
                             <a class="lgx-btn" href="news.html">View More Blogs</a>
                         </div>
-                    </div><!-- //.CONTAINER -->
-                </div><!-- //.INNER -->
+                    </div>
+                </div>
             </div>
-        </section>
+        </section> -->
         <!--News END-->
-
-
-
+    
+    
+    <!--ABOUT-->
+    <div id="about-link"></div>
+    <section >
+        <div id="lgx-about" class="lgx-about">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="lgx-about-content-area">
+                                <div class="lgx-heading">
+                                    <h2 class="heading">About</h2>
+                                    <h3 class="subheading">Nakshatra</h3>
+                                </div>
+                                <div class="lgx-about-content">
+                                    <p class="text">
+                                        Nakshatra is an all India MCA meet organised by the ambitious students of the MCA department.
+                                        The two day technical fest is organised under the Computer Science and Engineering 
+                                        Department of NIT, Calicut. The responses received last few years were very encouraging and it has motivated us to take a step further and make Nakshatra'19 even bigger than last year's. This technical meet indulges an array of both technical as well as non-technical events along with talks by renowned and respected individuals from the IT industry. 
+                                        Hope to see you there!
+                                    </p>
+                                    <!-- <div class="section-btn-area">
+                                        <a class="lgx-btn" href="about.html">More About</a>
+                                        <a class="lgx-btn lgx-btn-red lgx-scroll" href="#lgx-registration">Buy Ticket</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="lgx-about-video">
+                                <div class="lgx-video-area">
+                                    <figure>
+                                        <a href="#"><img src="{% static 'assets/img/min-logo1.png' %}" alt="Event Video"></a>
+                                        <figcaption>
+                                            <div class="video-icon">
+                                                <div class="lgx-vertical">
+                                                    <a id="myModalLabel" class="icon" href="#" data-toggle="modal" data-target="#lgx-modal">
+                                                        <i class="fa fa-play " aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <!-- Modal-->
+                                    <div id="lgx-modal" class="modal fade lgx-modal">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" id="myVideoCloseButton" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <iframe  class="myVideoClass" width="853" height="480" src="https://www.youtube.com/embed/M23C1rKXk00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- //.Modal-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
+    <!--ABOUT END-->
+    <div id="travel-info-link"></div>
         <!--TRAVEL INFO-->
-        <section>
+        <section data-aos="slide-up">
             <div id="lgx-travelinfo" class="lgx-travelinfo">
                 <div class="lgx-inner">
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="lgx-heading">
-                                    <h2 class="heading">Event Information</h2>
-                                    <h3 class="subheading">Conferences dedicated to building remarkable events.</h3>
+                                    <h2 class="heading" style="color:white">Travel and Contact</h2>
+                                    <!-- <h3 class="subheading" style="color:white">Conferences dedicated to building remarkable events.</h3> -->
                                 </div>
                             </div>
                             <!--//main COL-->
@@ -1032,20 +1275,29 @@
                             <div class="col-xs-12">
                                 <div class="lgx-travelinfo-content">
                                     <div class="lgx-travelinfo-single">
-                                        <img src="assets/img/info-icon1.png" alt="location"/>
-                                        <h3 class="title">Venue</h3>
-                                        <p class="info">Docklands Convention Centre 58 Wurundjeri Way Dablin, 3000</p>
+                                        <img src="{% static 'assets/img/info-icon1.png' %}" alt="location"/>
+                                        <h3 class="title" style="color:white">Venue</h3>
+                                        <h4 class="date" style="color:blueviolet">
+                                            2nd and 3rd February, 2019
+                                        </h4>
+                                        <p class="info" style="color:white">National Institute Of Technology, <br>
+                                Calicut, Kerala</p>
+                                <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> View location on Google maps</a>
                                     </div>
                                     <div class="lgx-travelinfo-single">
-                                        <img src="assets/img/info-icon2.png" alt="Transport"/>
-                                        <h3 class="title">Transport</h3>
-                                        <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do incididunt</p>
+                                        <img src="{% static 'assets/img/info-icon2.png' %}" alt="Transport"/>
+                                        <h3 class="title" style="color:white">Transport</h3>
+                                        <p class="info" style="color:white">NIT Calicut is located in a campus at Chathamangalam, About 22km from Calicut Railway Station in Kerala state.
+                                        The nearest airport is 
+                                        Calicut International Airport (CCJ)
+                                        , which is 45 kms from 
+                                        the Institute</p>
                                     </div>
-                                    <div class="lgx-travelinfo-single">
-                                        <img src="assets/img/info-icon3.png" alt="Hotel & Restaurant"/>
+                                    <!-- <div class="lgx-travelinfo-single">
+                                        <img src="{% static 'assets/img/info-icon3.png" alt="Hotel & Restaurant"/>
                                         <h3 class="title">Hotel & Restaurant</h3>
                                         <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do incididunt</p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -1056,18 +1308,18 @@
             </div>
         </section>
         <!--TRAVEL INFO END-->
-
-
-
-
-    <!--VIDEO-->
+    
+    
+    
+    
+    <!--VIDEO--><!-- 
     <section>
         <div id="lgx-video" class="lgx-video">
             <div class="lgx-inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <!--<h2 class="lgx-video-title"><span>Watch Our Promo video!</span>How to make an online order</h2>-->
+                            <h2 class="lgx-video-title"><span>Watch Our Promo video!</span>How to make an online order</h2>
                             <div class="lgx-video-area">
                                 <figure>
                                     <figcaption>
@@ -1080,7 +1332,6 @@
                                         </div>
                                     </figcaption>
                                 </figure>
-                                <!-- Modal-->
                                 <div id="lgx-modal" class="modal fade lgx-modal">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -1088,19 +1339,23 @@
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                             </div>
                                             <div class="modal-body">
-                                                <iframe id="modalvideo" src="../../../../../www.youtube.com/embed/oSPR5Go05Vg" allowfullscreen></iframe>
+                                                <iframe class="myVideoClass" width="420" height="315"
+    src="https://www.youtube.com/embed/es9m6LFK6DI">
+    </iframe>
                                             </div>
                                         </div>
                                     </div>
-                                </div> <!-- //.Modal-->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- //.CONTAINER -->
-            </div><!-- //.INNER -->
+                </div>
+            </div>
         </div>
-    </section>
+    </section> -->
     <!--//.VIDEO END-->
-
+    
+    
+    
 
 {% endblock %}

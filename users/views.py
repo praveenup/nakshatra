@@ -45,7 +45,7 @@ def register(request):
             msg.content_subtype = "html"
             PROJECT_ROOT = os.path.abspath(os.path.dirname(__name__))
             print('path:' ,PROJECT_ROOT)
-            msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
+            msg.attach_file('/home/oceanknr/webapps/demo_django/myproject/pdfs/confirmation_letter.pdf')
             # msg.attach_file('pdfs/confirmation_letter.pdf')
 
             msg.send()

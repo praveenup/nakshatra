@@ -40,6 +40,13 @@
             <!--News-->
             <section>
                 <div class="container">
+                        {% if form.non_field_errors %}
+                        {% for message in form.non_field_errors %}
+                            <div class="text-center alert alert-danger">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                        {% endif %}
                         {% if messages %}
                         {% for message in messages %}
                             <div class="text-center alert alert-{{message.tags}}">
