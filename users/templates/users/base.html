@@ -10,9 +10,9 @@
     <!-- The above 3 meta tags *must* come first in the head -->
 
     <!-- SITE TITLE -->
-    <title>Nakshatra'19 - All India MCA Meet</title>
-    <meta name="description" content="Nakshatra 2k19 - All India MCA Meet"/>
-    <meta name="keywords" content="Nakshatra, MCA, 2k19, 19, Nit, calicut, Nakshatra 2k19 ,All India MCA Meet"/>
+    <title>Nakshatra'19 - All India MCA Meet NIT Calicut</title>
+    <meta name="description" content="Nakshatra 2k19 - All India MCA Meet NIT Calicut"/>
+    <meta name="keywords" content="Nakshatra, MCA, 2k19, 19, Nit, calicut, Nakshatra 2k19 ,All India MCA Meet, nitc, NITC, nakshatra19, nakshatra19.com,www.nakshatra19.com, nakshatra19 nitc"/>
     <meta name="author" content="www.nakshatra19.com"/>
 
 
@@ -31,20 +31,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}"/>
     <!-- this icon shows in browser toolbar -->
     <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}"/>
-    <!-- this icon shows in browser toolbar -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png"> -->
     
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Open+Sans" rel="stylesheet">
 
@@ -142,15 +128,22 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse lgx-collapse">
                         <ul class="nav navbar-nav lgx-nav">
-                            <li>
-                                <a class="lgx-scroll" href="#lgx-header" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                            <li>
-                            <li><a class="lgx-scroll" href="#schedule-link" data-toggle="collapse" data-target=".navbar-collapse.show">Events</a></li>
-                            <li><a class="lgx-scroll" href="#sponsors-link" data-toggle="collapse" data-target=".navbar-collapse.show">Sponsors</a></li>
-                            <li><a class="lgx-scroll" href="#photo-gallery-link" data-toggle="collapse" data-target=".navbar-collapse.show">Gallery</a></li>
-                            <li><a class="lgx-scroll" href="#about-link" data-toggle="collapse" data-target=".navbar-collapse.show">About</a></li>
-                            <li><a class="lgx-scroll" href="#travel-info-link" data-toggle="collapse" data-target=".navbar-collapse.show">Contact Us</a></li>
-
+                            {% url 'index' as index_url %}
+                            {% if request.get_full_path == index_url %}
+                                <li>
+                                    <a class="lgx-scroll" href="#lgx-header" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                <li>
+                                <li><a class="lgx-scroll" href="#schedule-link" data-toggle="collapse" data-target=".navbar-collapse.show">Events</a></li>
+                                <li><a class="lgx-scroll" href="#sponsors-link" data-toggle="collapse" data-target=".navbar-collapse.show">Sponsors</a></li>
+                                <li><a class="lgx-scroll" href="#photo-gallery-link" data-toggle="collapse" data-target=".navbar-collapse.show">Gallery</a></li>
+                                <li><a class="lgx-scroll" href="#about-link" data-toggle="collapse" data-target=".navbar-collapse.show">About</a></li>
+                                <li><a class="lgx-scroll" href="#travel-info-link" data-toggle="collapse" data-target=".navbar-collapse.show">Contact Us</a></li>
+                            {% else %}
+                                <li>
+                                    <a class="lgx-scroll" href="{% url 'index' %}" class="dropdown-toggle active" data-toggle="collapse" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                <li>    
+                                        <li><a class="lgx-scroll" href="#lgx-footer" data-toggle="collapse" data-target=".navbar-collapse.show">Contact Us</a></li>
+                            {% endif %}
                             <!-- <li><a class="lgx-scroll" href="#lgx-news" data-toggle="collapse" data-target=".navbar-collapse.show">News</a></li>
                             <li><a class="lgx-scroll" href="contact.html" data-toggle="collapse" data-target=".navbar-collapse.show">Contact</a></li> -->
                         </ul>
@@ -235,7 +228,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
                             </div>
                             <div class="modal-body">
                                 <div class="lgxmapcanvas map-canvas-default" id="map_canvas">
@@ -247,7 +240,7 @@
 
                 <div class="lgx-footer-bottom">
                     <div class="lgx-copyright">
-                        <p> <span>©</span> 2019 -  <a href="http://www.nitc.ac.in" target="_blank">NITC</a>-MCA All rights reserved.</p>
+                        <p> <span>&copy;</span> 2019 -  <a href="http://www.nitc.ac.in" target="_blank">NITC</a>-MCA All rights reserved.</p>
                     </div>
                 </div>
 

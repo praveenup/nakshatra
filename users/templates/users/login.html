@@ -39,6 +39,7 @@
         <div class="lgx-page-wrapper">
             <!--News-->
             <section>
+                
                 <div class="container">
                         {% if form.non_field_errors %}
                         {% for message in form.non_field_errors %}
@@ -54,8 +55,16 @@
                             </div>
                         {% endfor %}
                         {% endif %}
+                        
                     <div class="row">
-
+                                    <div class="form-goup text-center">
+                                        <h4 class="text-muted">
+                                            Haven't Registered Your College ?
+                                            <a style="color:darkslateblue" href="{% url 'register' %}">Register Now</a>
+                                        </h3>
+                                    </div>
+                                    
+                                        <br>
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
                                 <form method="POST">
                                         {% csrf_token %}
@@ -75,14 +84,7 @@
                                         </div>
 
                                     </form>
-                                    <div class="form-goup text-center">
-                                        <h4 class="text-muted">
-                                            Need An Account?
-                                            <a href="{% url 'register' %}">Sign Up Now</a>
-                                        </h3>
-
-
-                                    </div>
+                                    
                             <!-- <form method="POST" class="lgx-contactform" action="http://themearth.com/demo/html/emeet/view/php/form-handler.php">
                                 <div class="form-group">
                                     <input type="text" name="lgxname" class="form-control lgxname" id="lgxname" placeholder="Enter Your Name" required>

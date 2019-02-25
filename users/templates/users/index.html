@@ -46,9 +46,11 @@
                                             <h2 style="margin:0px;padding:0px;font-family: 'Open Sans'; color:#fff;font-size: 20px">NATIONAL INSTITUTE OF TECHNOLOGY, CALICUT</h2>
                                         <!-- <a class="lgx-btn lgx-btn-red" href="{% url 'register' %}">Register</a> -->
                                         <h1 class="location">All India MCA Meet</h1>
-                                        <h3 class="date"><i class="fa fa-calendar"></i>&nbsp;&nbsp; 2nd and 3rd FEB</h3>
+                                        <h3 class="date"><i class="fa fa-calendar"></i>&nbsp;&nbsp; 23rd and 24th FEB</h3>
                                         <div class="action-area  text-center">
-                                            <a class="lgx-btn lgx-btn-lightgrey" href="#">Registrations Open Soon </a>
+                                            <a class="lgx-btn lgx-btn-lightgrey" href="{% url 'register' %}">Register</a>
+                                            <a class="lgx-btn lgx-btn-lightgrey" href="{% url 'photo_register' %}">Fotographie</a>
+                                            <!-- <a class="lgx-btn lgx-btn-lightgrey" href="{% url 'pubg' %}">PUBG</a> -->
                                             <!-- <div class="lgx-video-area">
                                                 <a class="lgx-btn lgx-btn-red" href="{% url 'register' %}">Register</a>
                                                 <p class="video-area"><a id="myModalLabel" class="icon" href="#" data-toggle="modal" data-target="#lgx-modal">
@@ -96,7 +98,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="circular-countdown-area">
-                                    <div id="circular-countdown" data-date="2019-02-02 00:00:00" ></div>
+                                    <div id="circular-countdown" data-date="2019-02-23 00:00:00" ></div>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +129,7 @@
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6 col-md-3">
                                                         <div class="lgx-counter-area">
-                                                            <img src="{% static  'assets/img/icons/2.png' %}" alt="teacher icon">
+                                                            <img src="{% static  'assets/img/icons/2.png' %}">
                                                             <div class="counter-text">
                                                                 <span class="lgx-counter">30</span><span style="font-size: 50px;">+</span>
                                                                 <small>COLLEGES</small>
@@ -136,7 +138,7 @@
                                                     </div> <!--//.COL-->
                                                     <div class="col-xs-12 col-sm-6 col-md-3">
                                                         <div class="lgx-counter-area">
-                                                            <img src="{% static  'assets/img/icons/3.png' %}" alt="teacher icon">
+                                                            <img src="{% static  'assets/img/icons/3.png' %}" >
                                                             <div class="counter-text">
                                                                 <span class="lgx-counter">150</span><span style="font-size: 50px;">+</span>
                                                                 <small>PARTICIPANTS</small>
@@ -145,7 +147,7 @@
                                                     </div> <!--//.COL-->
                                                     <div class="col-xs-12 col-sm-6 col-md-3">
                                                         <div class="lgx-counter-area">
-                                                            <img src="{% static  'assets/img/icons/1.png' %}" alt="teacher icon">
+                                                            <img src="{% static  'assets/img/icons/1.png' %}" >
                                                             <div class="counter-text">
                                                                 <span class="lgx-counter">2</span>
                                                                 <small>DAYS</small>
@@ -156,7 +158,7 @@
                                                     
                                                     <div class="col-xs-12 col-sm-6 col-md-3">
                                                         <div class="lgx-counter-area">
-                                                            <img src="{% static  'assets/img/icons/4.png' %}" alt="teacher icon">
+                                                            <img src="{% static  'assets/img/icons/4.png' %}" >
                                                             <div class="counter-text">
                                                                 <span class="lgx-counter">12</span>
                                                                 <small>EVENTS</small>
@@ -354,9 +356,9 @@
                                                 <div class="panel-title">
                                                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/kodetanatra.jpg' %}" alt="eventlogo"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Kode Tantra</h3>
@@ -380,9 +382,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/bugbuster.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">10:30 <span>Am</span> - 11.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Bug Buster</h3>
@@ -406,12 +408,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author author-multi">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
-                                                                <img src="assets/img/schedule/speaker3.jpg" alt="Speaker"/>
-                                                                <img src="assets/img/schedule/speaker4.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/enigma.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">11:30 <span>Am</span> - 01.30 <span>Pm</span></h4> -->
                                                                 <h3 class="title">Enigma</h3>
@@ -435,9 +434,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker4.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/thescienceofdeduction.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">02:00 <span>Am</span> - 03.30 <span>Pm</span></h4> -->
                                                                 <h3 class="title">The Science of Deduction</h3>
@@ -495,11 +494,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author author-multi">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                                <img src="assets/img/schedule/speaker2.jpg" alt="Speaker"/>
-                                                                <img src="assets/img/schedule/speaker3.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/eventx.png' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Event X</h3>
@@ -523,9 +520,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="true" aria-controls="collapseTwo2">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/quibble.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Quibble</h3>
@@ -549,9 +546,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="true" aria-controls="collapseThree2">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/switchandwow.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Switch and Wow</h3>
@@ -577,9 +574,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour2" aria-expanded="true" aria-controls="collapseFour2">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/theconversion.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">The Convergence</h3>
@@ -615,9 +612,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/fotogaphie.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Fotografie</h3>
@@ -632,6 +629,7 @@
                                                     <p class="text">
                                                         A picture is worth a thousand words. We are waiting to hear what you say have got to say.
                                                     </p>
+                                                    <a class="lgx-btn lgx-btn-sm lgx-btn-lightgrey" target="_blank" href="{% static 'assets/fotographie_rules.pdf' %}">Rules</a>
                                                     <!-- <h4 class="location"><strong>Participants:</strong>   Hall 1, Building A , Golden Street , <span>Southafrica</span> </h4> -->
                                                 </div>
                                             </div>
@@ -641,9 +639,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3" aria-expanded="true" aria-controls="collapseTwo3">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/codeknight.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Code Knight</h3>
@@ -667,9 +665,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="true" aria-controls="collapseThree3">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/pubg.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">PUBG</h3>
@@ -701,9 +699,9 @@
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
                                                         <div class="lgx-single-schedule">
-                                                            <!-- <div class="author">
-                                                                <img src="assets/img/schedule/speaker1.jpg" alt="Speaker"/>
-                                                            </div> -->
+                                                            <div class="author">
+                                                                <img src="{% static 'assets/img/eventlogo/degreeinaday.jpg' %}" alt="Speaker"/>
+                                                            </div>
                                                             <div class="schedule-info">
                                                                 <!-- <h4 class="time">09:00 <span>Am</span> - 10.30 <span>Am</span></h4> -->
                                                                 <h3 class="title">Degree in a day</h3>
@@ -790,73 +788,84 @@
 </section>
 <!--SCHEDULE END-->
     
-    
-    
-    <!--SPONSORED-->
-    <div id="sponsors-link"></div>
-    <section data-aos="slide-up">
-        <div id="lgx-sponsors" class="lgx-sponsors lgx-sponsors-black">
-            <div class="lgx-inner-bg">
-                <div class="lgx-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Previous Sponsors</h2>
-                                    <!-- <h3 class="subheading">Welcome to the dedicated to building remarkable Sponsores!</h3> -->
-                                </div>
+<!--SPONSORED-->
+<div id="sponsors-link"></div>
+<section  data-aos="slide-up">
+    <div id="lgx-sponsors" class="lgx-sponsors">
+        <div class="lgx-inner-bg">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading">
+                                <h2 class="heading">Sponsores</h2>
                             </div>
                         </div>
-                        <!--//main row-->
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="sponsors-area sponsors-area-colorfull-border">
-                                    <div class="single">
-                                        <a class="" href="#"><img  src="{% static 'assets/img/sponsors/10.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/1.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/2.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/3.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/4.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/5.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/6.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/7test.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/8.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'assets/img/sponsors/9.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--//col-->
-                        </div>
-                        <!-- <div class="section-btn-area sponsor-btn-area">
-                            <a class="lgx-btn" href="#">Become A Sponsor</a>
-                        </div> -->
                     </div>
-                    <!--//container-->
+                    <!--//main row-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="sponsored-heading first-heading">Title Sponsor</h3>
+                            <div class="sponsors-area">
+                                <div class="single">
+                                    <a class="" href="https://www.kla-tencor.com" target="_blank"><img data-toggle="tooltip" title="KLA" src="{% static 'assets/img/sponsors/KLA_Logo_clr_p_rgb.png' %}" alt="sponsor"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//col-->
+                    </div>
+                    <!--//row-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="sponsored-heading secound-heading">Previous Sponsors</h3>
+                            <div class="sponsors-area">
+                                <div class="single">
+                                    <a class="" href="#"><img data-toggle="tooltip" title="Lambda Gaming" src="{% static 'assets/img/sponsors/10.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/1.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/2.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/3.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/4.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/5.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/6.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/7test.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/8.png' %}" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" href="#"><img src="{% static 'assets/img/sponsors/9.png' %}" alt="sponsor"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//col-->
+                    </div>
                 </div>
+                <!--//container-->
             </div>
-            <!--//lgx-inner-->
         </div>
-    </section>
-    <!--SPONSORED END-->
-    
+        <!--//lgx-inner-->
+    </div>
+</section>
+<!--SPONSORED END-->    
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>
         <!--TESTIMONIALS -->
         <!-- <section data-aos="slide-up">
             <div id="lgx-testimonial" class="lgx-testimonial">
@@ -1278,7 +1287,7 @@
                                         <img src="{% static 'assets/img/info-icon1.png' %}" alt="location"/>
                                         <h3 class="title" style="color:white">Venue</h3>
                                         <h4 class="date" style="color:blueviolet">
-                                            2nd and 3rd February, 2019
+                                            23rd and 24th February, 2019
                                         </h4>
                                         <p class="info" style="color:white">National Institute Of Technology, <br>
                                 Calicut, Kerala</p>

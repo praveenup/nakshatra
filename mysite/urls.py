@@ -22,5 +22,9 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('users/', include('users.urls')),
     path('quiz/', include('quiz.urls')),
+    path('shirt/', include('shirt.urls')),
+    #path('card/', include('card.urls')),
     path('', views.index, name='index'),
+    path('codeknight/', include('codenight.urls')),
+    path('pubg/', include('pubg.urls')),
 ]

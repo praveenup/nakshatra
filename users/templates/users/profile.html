@@ -16,7 +16,9 @@
         <div class="lgx-banner lgx-banner-inner">
             <div class="lgx-page-inner">
                 <div class="container">
-                    
+                        <div class="form-goup text-right">
+                                <a href="{% url 'logout' %}" class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send">Logout</a>
+                        </div>
                         {% if messages %}
                         {% for message in messages %}
                             <div class="text-center alert alert-{{message.tags}}">
@@ -28,7 +30,7 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Profile</h2>
+                                    <h2 class="heading">Profile  of Team : {{ user.username }}</h2>
                                 </div>
                                 <ul class="breadcrumb">
                                     <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
@@ -49,14 +51,14 @@
             <section>
                 <div class="container">
                     <div class="row">
-
                         <div class="col-sm-12 col-md-6 col-md-offset-3 text-center">
                             <h3>Download required documents</h3>
-                            
                             <div class="alert alert-success text-center">
-                                    <a href="{% static 'assets/confirmation_letter.pdf' %}">Confirmation Letter</a>
+                                    <a href="{% static 'assets/Confirmation_Mail.pdf' %}">Confirmation Letter</a>
                                     <br>
-                                    <a href="{% static 'assets/NAKSHATRA18_RULES.pdf' %}">Rules For Nakshatra </a>
+                                    <a href="{% static 'assets/rules.pdf' %}">Rules For Nakshatra </a>
+                                    <!-- <br> -->
+                                    
                             </div>
                             
                             <!-- MODAL SECTION -->

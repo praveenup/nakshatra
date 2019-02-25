@@ -16,8 +16,6 @@
         <div class="lgx-banner lgx-banner-inner">
             <div class="lgx-page-inner">
                 <div class="container">
-                    
-                        
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
@@ -41,6 +39,13 @@
         <div class="lgx-page-wrapper">
             <!--News-->
             <section>
+                    <div class="form-goup text-center">
+                        <h4 class="text-muted">
+                            Already Registered Your College? 
+                            <a style="color:darkslateblue " href="{% url 'login' %}">Login Now</a>  
+                        </h3>
+                    </div>
+                    <br>
                 <div class="container">
                         {% if messages %}
                         {% for message in messages %}
@@ -50,18 +55,14 @@
                         {% endfor %}
                         {% endif %}
                     <div class="row">
-
+                            
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
+                                
                                 <form method="POST"  action="{% url 'register' %}">
                                         {% csrf_token %}
-                                        
-                                        <!-- <legend class="text-center">
-                                                <h3>Register Nakshatra</h3>      
-                                        </legend> -->
-                                            
-                                        
-                                        {{ form_u|crispy }}
 
+                                        {{ form_u|crispy }}
+                                        <h4 class="alert alert-info">If you can't find your college , Contact us at info@nakshatra19.com</h4>
                                         {{ form_c|crispy }}
                                         <div class="form-group"> 
                                                 <label for="id_participant1" class="col-form-label  requiredField">
@@ -70,8 +71,8 @@
                                                 </label> 
                                                 <div class=""> 
                                                     <input type="text" name="participant1" class="form-control" required id="id_participant1"> 
-                                                    <input type="radio" name="gender1" value="M"> Male<br>
-                                                    <input type="radio" name="gender1" value="F"> Female<br>
+                                                    <input type="radio" name="gender1" value="M" required> Male<br>
+                                                    <input type="radio" name="gender1" value="F" required> Female<br>
                                                 </div> 
                                             </div>
                                             <div class="form-group"> 
@@ -81,8 +82,8 @@
                                                 </label> 
                                                 <div class=""> 
                                                     <input type="text" name="participant2" class="form-control" required id="id_participant2"> 
-                                                    <input type="radio" name="gender2" value="M"> Male<br>
-                                                    <input type="radio" name="gender2" value="F"> Female<br>
+                                                    <input type="radio" name="gender2" value="M" required> Male<br>
+                                                    <input type="radio" name="gender2" value="F" required> Female<br>
                                                 </div> 
                                             </div>
                                             <div class="form-group"> 
@@ -92,8 +93,8 @@
                                                 </label> 
                                                 <div class=""> 
                                                     <input type="text" name="participant3" class="form-control" required id="id_participant3"> 
-                                                    <input type="radio" name="gender3" value="M"> Male<br>
-                                                    <input type="radio" name="gender3" value="F"> Female<br>
+                                                    <input type="radio" name="gender3" value="M" required> Male<br>
+                                                    <input type="radio" name="gender3" value="F" required> Female<br>
                                                 </div> 
                                             </div>    
                                             <div class="form-group"> 
@@ -103,8 +104,8 @@
                                                 </label> 
                                                 <div class=""> 
                                                     <input type="text" name="participant4" class="form-control" required id="id_participant4"> 
-                                                    <input type="radio" name="gender4" value="M"> Male<br>
-                                                    <input type="radio" name="gender4" value="F"> Female<br>
+                                                    <input type="radio" name="gender4" value="M" required> Male<br>
+                                                    <input type="radio" name="gender4" value="F" required> Female<br>
                                                 </div> 
                                             </div>
                                             <div class="form-group"> 
@@ -114,8 +115,8 @@
                                                 </label> 
                                                 <div class=""> 
                                                     <input type="text" name="participant5" class="form-control" required id="id_participant5"> 
-                                                    <input type="radio" name="gender5" value="M"> Male<br>
-                                                    <input type="radio" name="gender5" value="F"> Female<br>
+                                                    <input type="radio" name="gender5" value="M" required> Male<br>
+                                                    <input type="radio" name="gender5" value="F" required> Female<br>
                                                 </div> 
                                             </div>
                                         <div class="form-goup text-center">
@@ -123,34 +124,6 @@
                                         </div>
                             
                                     </form>
-                                    <div class="form-goup text-center">
-                                        <h4 class="text-muted">
-                                            Already Have An Account? 
-                                            <a href="{% url 'login' %}">Login Now</a>  
-                                        </h3>
-                                                        
-                                        
-                                    </div>
-                            <!-- <form method="POST" class="lgx-contactform" action="http://themearth.com/demo/html/emeet/view/php/form-handler.php">
-                                <div class="form-group">
-                                    <input type="text" name="lgxname" class="form-control lgxname" id="lgxname" placeholder="Enter Your Name" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" name="lgxemail" class="form-control lgxemail" id="lgxemail" placeholder="Enter email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" name="lgxsubject" class="form-control lgxsubject" id="lgxsubject" placeholder="Subject" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea class="form-control lgxmessage" name="lgxmessage" id="lgxmessage" rows="5" placeholder="We expect drop some line from you..." required></textarea>
-                                </div>
-
-
-                                
-                            </form> -->
 
                             <!-- MODAL SECTION -->
                             <div id="lgx-form-modal" class="modal fade lgx-form-modal" tabindex="-1" role="dialog" aria-hidden="true">

@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
 
 class PhotoRegistration(models.Model):
-    college = models.OneToOneField(College, on_delete=models.CASCADE)
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=50)
     student_name = models.CharField(max_length=100)

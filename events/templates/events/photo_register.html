@@ -22,11 +22,11 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Register Nakshatra</h2>
+                                    <h2 class="heading">Registration For Fotographie</h2>
                                 </div>
                                 <ul class="breadcrumb">
                                     <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-                                    <li class="active">Register</li>
+                                    <li class="active">Fotographie</li>
                                 </ul>
                             </div>
                         </div>
@@ -41,6 +41,14 @@
         <div class="lgx-page-wrapper">
             <!--News-->
             <section>
+                    
+                    <div class="form-goup text-center">
+                            <h4 class="text-muted">
+                                Already Registered For Fotographie? 
+                                <a style="color:darkslateblue " href="{% url 'photo_login' %}">Login Here To Upload</a>  
+                            </h3>
+                        </div>
+                        <br>
                 <div class="container">
                         {% if messages %}
                         {% for message in messages %}
@@ -50,30 +58,43 @@
                         {% endfor %}
                         {% endif %}
                     <div class="row">
-
+                        <div class="alert alert-info">
+                            <legend>
+                                Instructions
+                            </legend>
+                            <!-- <a class="lgx-btn-lightgrey" target="_blank" href="{% static 'assets/fotographie_rules.pdf' %}">Read Rules</a> -->
+                            <ul>
+                                <li>To claim prizes, your college must be registered at the official site of <b><a href="{% url 'register' %}" target="_blank">Nakshatra</a></b>.</li>
+                                <li>Each college can have multiple submissions. But only one photo per person.</li>
+                                <li>If you can't find your college in the list, Contact us at info@nakshatra19.com.</li>
+                                <li>After registration you will <b>randomly get a word that will be the theme for the photo that they take</b> (word will be sent via E-mail, do check the spam folder).</li>
+                                <li>The maximum size of the photo to be uploaded should be <b>5MB</b>.</li>
+                                <li>The photo must be either in <b>jpeg, jpg or png format</b>.</li>
+                                <li>Participants must submit only original work with <b>filename as collegeName_participantName</b>. (eg. NITCalicut_xyz).</li>
+                                <li>An unedited photograph has to be submitted along with its meaningful description based on the word selected.</li>
+                                <li>Photo should not include trademarks, contract rights, or any other intellectual property rights of any other third person or entity.</li>
+                                <li>Photo should not contain names, likenesses, or other characteristics identifying celebrities or other public figures, living or dead.</li>
+                                <li>The judges will determine the winner based on two criteria,
+                                    <ul type="1">
+                                        <li>The <b>number of likes</b> that the photo gets on the official Facebook page of Nakshatra.</li>
+                                        <li>The <b>adherence of the photo and caption to the theme</b> chosen by the participant.</li>
+                                    </ul>
+                                    
+                                </li>
+                                <li>The upload link will be <b>active till the 23:59, 22nd of February, 2019</b>.</li>
+                                <li>Download PDF of rules <b><a class="lgx-btn-lightgrey" target="_blank" href="{% static 'assets/fotographie_rules.pdf' %}">here</a></b></li>
+                                <li><b><a href="{% url 'photo_login' %}">Login here</a></b> with your registered email and password to submit your photograph.</li>
+                            </ul>    
+                        </div>
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
                                 <form method="POST"   action="{% url 'photo_register' %}">
                                         {% csrf_token %}
-                                        
-                                        <!-- <legend class="text-center">
-                                                <h3>Register Nakshatra</h3>      
-                                        </legend> -->
-                                            
-                                        
                                         {{ form|crispy }}
                                         <div class="form-goup text-center">
                                             <input class="lgx-btn hvr-glow hvr-radial-out lgxsend lgx-send" type="submit" value="Register">
                                         </div>
                             
                                     </form>
-                                    <div class="form-goup text-center">
-                                        <h4 class="text-muted">
-                                            Already Have An Account? 
-                                            <a href="{% url 'photo_login' %}">Login Now</a>  
-                                        </h3>
-                                                        
-                                        
-                                    </div>
                             <!-- <form method="POST" class="lgx-contactform" action="http://themearth.com/demo/html/emeet/view/php/form-handler.php">
                                 <div class="form-group">
                                     <input type="text" name="lgxname" class="form-control lgxname" id="lgxname" placeholder="Enter Your Name" required>

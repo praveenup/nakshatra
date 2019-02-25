@@ -1,9 +1,14 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
 from django.contrib.auth.models import User
-from .models import Students, UserCollege, Shirt, CodingCompetition
+from .models import Students, UserCollege, TShirt, CodingCompetition
 
 
+# class CustomAuthenticationForm(AuthenticationForm):
+#     username = UsernameField(
+#         label = 'Team Name',
+#         widget = forms.TextInput(attrs={'autofocus':True})
+#     )
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
@@ -28,7 +33,7 @@ class CollegeForm(forms.ModelForm):
 
 class ShirtForm(forms.ModelForm):
     class Meta:
-        model = Shirt
+        model = TShirt
         fields = "__all__"
 
 

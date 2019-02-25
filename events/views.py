@@ -3,17 +3,21 @@ from django.contrib import messages
 from .forms import  UserPhotoForm, PhotoRegistrationForm
 from django.core.mail import EmailMessage
 from .models import PhotoRegistration, UserPhoto
+from users.models import College
 from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.templatetags.staticfiles import static
 import os.path
 import random
 
 def photo_register(request):
+    return render(request, 'events/rules.html')
+
+def photo_register(request):
     if request.method == "POST":
         form = PhotoRegistrationForm(request.POST)
         if form.is_valid():
 
-            topics = ['topic1','topic2','topic3','topic4','topic5']
+            topics = ['Chiaroscuro','Cliched','Musings','Psychedelia','Disappearance','Synchronous','Equilibrium']
             photo_topic = topics[random.randint(0,len(topics)-1)]
 
             user_detail = form.save(commit=False)
@@ -21,13 +25,14 @@ def photo_register(request):
             user_detail.save()
             messages.success(request, 'Successfully registered')
             email = request.POST['email']
-            email_body = "<html><h3>You have successfully registered</h3><br>Name:" + request.POST['student_name'] + "<br>Password: " + request.POST['password'] + "<br><h2>Your Topic : " + photo_topic + "</h2>" + "</html>"
-            msg = EmailMessage('Subject of the Email', email_body , 'nakshatra2k19@gmail.com',
-            [email,'praveenkprestige@gmail.com'],)
+            college_name = College.objects.get(pk=request.POST['college'])
+            print(college_name)
+            email_body = "<html><h3>You have successfully registered</h3><h3>Upload your photo by login <a href='https://www.nakshatra19.com/events/photo_login'>here</a></h3> <br><h2>Your Topic : " + photo_topic + "</h2>" + "<br>College Name: " + str(college_name) + "<br>Email: " + request.POST['email'] + "<br>Name: " + request.POST['student_name'] + "<br>Password: " + request.POST['password'] +  "<br> <h4>Please find attachment of rules below. Also make sure to go through the rules thoroughly before uploading a image.</h4><br><h4>Contact Us at info@nakshatra19.com</h4><h4>Coordinator -<br> Harshit Garg : 7838146755 </h4><h4>PR - <br> Rashi : 7902981382  </h4><h4>Shashidhar : 9177304519  </h4><h4>Nakshatra 2k19</h4></html>"
+            msg = EmailMessage('Fotographie: Nakshatra 2k19', email_body , 'info@nakshatra19.com',
+            [email],['rashigupta2011@gmail.com','praveenkprestige@gmail.com'])
             msg.content_subtype = "html"
-            # msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
-            msg.attach_file('/home/oceanknr/webapps/demo_django/myproject/pdfs/confirmation_letter.pdf')
-
+            msg.attach_file('/home/oceanknr/webapps/demo_django/myproject/pdfs/fotographie_rules.pdf')
+            # msg.attach_file('pdfs/Confirmation_Mail.pdf')
             msg.send()
             return render(request, 'events/photo_login.html',)
     else:
@@ -41,7 +46,7 @@ def photo_login(request):
         try:
             photo_user = PhotoRegistration.objects.get(email=email,password=password)
         except PhotoRegistration.DoesNotExist:
-            messages.success(request, 'Email and Password does not matched ')
+            messages.warning(request, 'Please enter the correct email and password.')
             return render(request, 'events/photo_login.html',)
         messages.success(request, 'Login Success ' + email)
         request.session['photo_user'] = photo_user.email
@@ -70,10 +75,11 @@ def upload_photo(request):
                             messages.success(request, 'Already Uploaded')
                             return render(request, 'events/upload_photo.html',)
                         email = request.session['photo_user']
-                        msg = EmailMessage('Subject of the Email', '<h1>Photo Body of the email</h1>', 'nakshatra2k19@gmail.com',
-                        [email,'praveenkprestige@gmail.com'],)
+                        college_name = College.objects.get(pk=photo_user.college.id)
+                        print(college_name)
+                        msg = EmailMessage('Fotographie: Nakshatra 2k19', "<h1>Your photo successfully uploaded.</h1><br>College Name: " + str(college_name) + "<br>Student Name: " + photo_user.student_name + "<br>Contact No: " + str(photo_user.contact_no)   + "<br>Topic:" + photo_user.topic + "<br>Description:<p>" + request.POST['description'] + "</p><br> <h4>Contact Us at info@nakshatra19.com</h4><h4>Coordinator - <br>Harshit Garg : 7838146755 </h4><h4>PR - <br> Rashi : 7902981382  </h4><h4>Shashidhar : 9177304519  </h4><h4>Nakshatra 2k19</h4>  </html>", 'info@nakshatra19.com',
+                        [email],['rashigupta2011@gmail.com','praveenkprestige@gmail.com'])
                         msg.content_subtype = "html"
-                        # msg.attach_file('/home/prakumup/prakumup.pythonanywhere.com/pdfs/confirmation_letter.pdf')
                         msg.attach_file('/home/oceanknr/webapps/static_media/media/' + user.image.name)
                         # msg.attach_file('media/' + user.image.name)
                         msg.send()

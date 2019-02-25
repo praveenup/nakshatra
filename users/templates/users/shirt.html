@@ -20,7 +20,7 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Order Your T-Shirt For Nakshatra</h2>
+                                    <h2 class="heading">Order Your Nakshatra TShirt</h2>
                                 </div>
                                 <ul class="breadcrumb">
                                     <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
@@ -50,6 +50,11 @@
                     <div class="row">
 
                         <div class="col-sm-12 col-md-6 col-md-offset-3">
+                                <div class="lgx-single-news" style="margin:0px;padding:0px;">
+                                    <figure>
+                                        <a href="#"><img src="{% static 'assets/img/shirtdesign.jpeg' %}" alt=""></a>
+                                    </figure>
+                                </div>
                                 <form method="POST" class="post-form">{% csrf_token %}
                                     {{ form|crispy }}
                                     <div class="form-goup text-center">
